@@ -1,6 +1,7 @@
 import 'dart:ui';
 import 'package:agora_rtc_engine/rtc_engine.dart';
 import 'package:flutter/material.dart';
+import 'package:founderslink/utils/constants.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:founderslink/utils/mixins/agoraSettings.dart';
 import 'package:agora_rtm/agora_rtm.dart';
@@ -8,12 +9,16 @@ import 'package:agora_rtc_engine/rtc_engine.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 import 'package:founderslink/config/settings.dart';
+import 'package:founderslink/view/pages/audio_call_page.dart';
 import 'package:founderslink/models/Users.dart';
 
 class ChatLobby extends StatefulWidget {
   final String channel;
   final String userName;
   final ClientRole role;
+
+
+
 
   ChatLobby({this.channel, this.userName, this.role});
   @override
@@ -326,6 +331,71 @@ class _ChatLobbyState extends State<ChatLobby> {
   //   _engine.muteLocalAudioStream(muted);
   // }
 
+  RtcEngineConfig config = RtcEngineConfig(Constants.APP_ID);
+  RtcEngine engine;
+
+
+  bool _joined = false;
+  int _remoteUid = 0;
+  bool _switch = false;
+
+  bool openMicrophone = true;
+  bool enableSpeakerphone = true;
+
+  Future<void> initPlatformState() async {
+
+    await [Permission.microphone].request();
+print('joining call ');
+    // Create RTC client instance
+    engine =await RtcEngine.createWithConfig(config);
+    // Define event handling logic
+    engine.setEventHandler(RtcEngineEventHandler(
+        joinChannelSuccess: (String channel, int uid, int elapsed) {
+          print('joinChannelSuccess ${channel} ${uid}');
+          setState(() {
+            _joined = true;
+          });
+        }, userJoined: (int uid, int elapsed) {
+      print('userJoined ${uid}');
+      setState(() {
+        _remoteUid = uid;
+      });
+    }, userOffline: (int uid, UserOfflineReason reason) {
+      print('userOffline ${uid}');
+      setState(() {
+        _remoteUid = 0;
+      });
+    }));
+    // Join channel with channel name as 123
+    await engine.joinChannel(Constants.APP_TOKEN, Constants.CHANNEL_NAME, null, 0);
+  }
+
+  _switchMicrophone() {
+    engine.enableLocalAudio(!openMicrophone).then((value) {
+      setState(() {
+        openMicrophone = !openMicrophone;
+      });
+    }).catchError((err) {
+      print('enableLocalAudio $err');
+    });
+  }
+
+  _switchSpeakerphone() {
+    engine.setEnableSpeakerphone(!enableSpeakerphone).then((value) {
+      setState(() {
+        enableSpeakerphone = !enableSpeakerphone;
+      });
+    }).catchError((err) {
+      print('setEnableSpeakerphone $err');
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    initPlatformState();
+  }
+
   @override
   void handlePressedRegister() async {
     // setState(() {
@@ -386,8 +456,8 @@ class _ChatLobbyState extends State<ChatLobby> {
 
   @override
   void dispose() {
-    _engine.leaveChannel();
-    _engine.destroy();
+    engine.leaveChannel();
+    engine.destroy();
     super.dispose();
   }
 
@@ -919,7 +989,16 @@ class _ChatLobbyState extends State<ChatLobby> {
                               fontSize: 12,
                               fontWeight: FontWeight.bold),
                         ),
-                        onPressed: () => {},
+                        onPressed: (){
+                        // engine.leaveChannel();
+                        //   engine.destroy();
+                        // Navigator.push(
+                        //         context,
+                        //         MaterialPageRoute(
+                        //             builder: (context) =>
+                        //                 JoinChannelAudio()),
+                        //       );
+                        },
                       ),
                     ),
                     Container(
@@ -941,7 +1020,16 @@ class _ChatLobbyState extends State<ChatLobby> {
                     )
                   ],
                 ),
-              )
+              ),
+              ElevatedButton(
+                onPressed: this._switchMicrophone,
+                child: Text('Microphone ${openMicrophone ? 'on' : 'off'}'),
+              ),
+              ElevatedButton(
+                onPressed: this._switchSpeakerphone,
+                child:
+                Text(enableSpeakerphone ? 'Speakerphone' : 'Earpiece'),
+              ),
             ],
           ),
         ),

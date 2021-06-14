@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:founderslink/view/auth/register.dart';
+import 'package:founderslink/view/auth/login.dart';
 
 void main() {
   runApp(MyApp());
@@ -32,6 +32,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Register());
+    return Scaffold(body: Login());
   }
 }
