@@ -3,6 +3,14 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/android.iml" filepath="$PROJECT_DIR$/.idea/modules/android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/782596522/android.agora_rtc_engine.iml" filepath="$PROJECT_DIR$/.idea/modules/782596522/android.agora_rtc_engine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1003621646/android.agora_rtm.iml" filepath="$PROJECT_DIR$/.idea/modules/-1003621646/android.agora_rtm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/android.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/android.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-731085273/android.flutter_boom_menu.iml" filepath="$PROJECT_DIR$/.idea/modules/-731085273/android.flutter_boom_menu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1947131820/android.integration_test.iml" filepath="$PROJECT_DIR$/.idea/modules/-1947131820/android.integration_test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1175326480/android.path_provider.iml" filepath="$PROJECT_DIR$/.idea/modules/1175326480/android.path_provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1144470687/android.permission_handler.iml" filepath="$PROJECT_DIR$/.idea/modules/-1144470687/android.permission_handler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/287550685/android.shared_preferences.iml" filepath="$PROJECT_DIR$/.idea/modules/287550685/android.shared_preferences.iml" />
     </modules>
   </component>
 </project>
