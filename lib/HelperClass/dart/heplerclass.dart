@@ -7,7 +7,6 @@ class AppImages {
   static const profile = 'images/profile.png';
   static const founder = 'images/founder.png';
   static const team = 'images/team.png';
-  static const found1 = 'images/found1.png';
 }
 
 class AppColor {
@@ -109,7 +108,7 @@ List<String> goalsList = [
 ];
 
 List<String> experineceList = [
-  " None, I'm looking to gain experience",
+  "None, I'm looking to gain experience",
   "Less than one year",
   "1 year",
   "2 years",
@@ -125,3 +124,41 @@ List<String> experineceList = [
   "Exited 2 companies",
   "Serial Entrepreneur",
 ];
+
+List<String> pronounsList = [
+    "Any pronouns",
+    "He/Him",
+    "Co/Co",
+    "Dhey/Dhem",
+    "Elle/Elles",
+    "Elle/he",
+    "Elle/they",
+    "En/En",
+    "Ey/En",
+    "Ey/em",
+    "Fey/fem",
+    "He/Him",
+    "Hir/Hirs",
+    "MySelf",
+    "Per/per",
+    "She/her",
+    "She/he",
+    "They/he",
+    "They/she",
+    "They/she/he",
+    "They/them",
+    "Vae/vem",
+    "Ve/ver",
+    "Ve/vis",
+    "Xe/him",
+    "Xe/she",
+    "Xe/he/she",
+    "Xe/he/they",
+    "Xe/she/they",
+    "Xe/they",
+    "Xe/xem ",
+    "Xie/hir",
+    "Yo/yo",
+    "Ze/zie",
+    "Ze/zi",
+  ];

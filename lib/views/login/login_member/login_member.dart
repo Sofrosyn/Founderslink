@@ -3,22 +3,24 @@ import 'package:flutter/material.dart';
 import 'package:founder_link/HelperClass/dart/heplerclass.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:founder_link/views/login/login_founder/login_founder2.dart';
+import 'package:founder_link/views/meeting/join_meeting.dart';
 import 'package:get/state_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class LoginFounder extends StatefulWidget {
+class LoginMember extends StatefulWidget {
   @override
-  _LoginFounderState createState() => _LoginFounderState();
+  _LoginMemberState createState() => _LoginMemberState();
 }
 
-class _LoginFounderState extends State<LoginFounder> {
+class _LoginMemberState extends State<LoginMember> {
   String selectedIndustry, selectedLocation;
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-        bottom: false,
-        top: false,
+      top: false,
+      bottom: false,
+      
         child: Scaffold(
           backgroundColor: Colors.white,
           body: Padding(
@@ -302,7 +304,7 @@ class _LoginFounderState extends State<LoginFounder> {
       decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(10.h)), color: Colors.black),
       child: GestureDetector(
         onTap: () {
-          Navigator.push(context, MaterialPageRoute(builder: (context) => LoginFounder2()));
+          Navigator.push(context, MaterialPageRoute(builder: (context) => JoinMeeting()));
         },
         child: Center(
             child: Text(

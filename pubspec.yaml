@@ -32,6 +32,7 @@ dependencies:
   get: ^4.1.4
   google_fonts: ^2.1.0
   dropdown_search: ^0.4.9
+  image_picker_widget: ^1.0.2
 
 dev_dependencies:
   flutter_test:

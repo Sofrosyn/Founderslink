@@ -3,15 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:founder_link/HelperClass/dart/heplerclass.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:founder_link/views/login/login_founder/login_founder2.dart';
+import 'package:founder_link/views/login/login_student/login_student.dart';
 import 'package:get/state_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class LoginFounder extends StatefulWidget {
+class LoginInvestor extends StatefulWidget {
   @override
-  _LoginFounderState createState() => _LoginFounderState();
+  _LoginInvestorState createState() => _LoginInvestorState();
 }
 
-class _LoginFounderState extends State<LoginFounder> {
+class _LoginInvestorState extends State<LoginInvestor> {
   String selectedIndustry, selectedLocation;
 
   @override
@@ -291,24 +292,29 @@ class _LoginFounderState extends State<LoginFounder> {
   }
 
   Widget _continueBtn() {
-    return Container(
-      margin: EdgeInsets.only(
-        top: 10.h,
-        left: 30.h,
-        right: 30.h,
-      ),
-      width: double.infinity,
-      height: 50.h,
-      decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(10.h)), color: Colors.black),
-      child: GestureDetector(
-        onTap: () {
-          Navigator.push(context, MaterialPageRoute(builder: (context) => LoginFounder2()));
-        },
-        child: Center(
-            child: Text(
-          "Continue",
-          style: GoogleFonts.poppins(fontSize: 12.h, color: Colors.white, fontWeight: FontWeight.bold),
-        )),
+    return GestureDetector(
+      onTap: () {
+        //  Get.to(()=>Signup());
+      },
+      child: Container(
+        margin: EdgeInsets.only(
+          top: 10.h,
+          left: 30.h,
+          right: 30.h,
+        ),
+        width: double.infinity,
+        height: 50.h,
+        decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(10.h)), color: Colors.black),
+        child: GestureDetector(
+          onTap: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) => LoginStudent()));
+          },
+          child: Center(
+              child: Text(
+            "Continue",
+            style: GoogleFonts.poppins(fontSize: 12.h, color: Colors.white, fontWeight: FontWeight.bold),
+          )),
+        ),
       ),
     );
   }

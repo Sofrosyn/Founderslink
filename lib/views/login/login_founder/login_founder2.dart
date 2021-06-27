@@ -2,6 +2,8 @@ import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
 import 'package:founder_link/HelperClass/dart/heplerclass.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:founder_link/views/profile/set_profile.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LoginFounder2 extends StatefulWidget {
@@ -276,29 +278,24 @@ class _LoginFounder2State extends State<LoginFounder2> {
   }
 
   Widget _continueBtn() {
-    return GestureDetector(
-      onTap: () {
-        //  Get.to(()=>Signup());
-      },
-      child: Container(
-        margin: EdgeInsets.only(
-          top: 10.h,
-          left: 30.h,
-          right: 30.h,
-        ),
-        width: double.infinity,
-        height: 50.h,
-        decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(10.h)), color: Colors.black),
-        child: GestureDetector(
-          onTap: () {
-            //  Get.to(()=>Register());
-          },
-          child: Center(
-              child: Text(
-            "Continue",
-            style: GoogleFonts.poppins(fontSize: 12.h, color: Colors.white, fontWeight: FontWeight.bold),
-          )),
-        ),
+    return Container(
+      margin: EdgeInsets.only(
+        top: 10.h,
+        left: 30.h,
+        right: 30.h,
+      ),
+      width: double.infinity,
+      height: 50.h,
+      decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(10.h)), color: Colors.black),
+      child: GestureDetector(
+        onTap: () {
+       Get.to(()=>SetProfile());
+        },
+        child: Center(
+            child: Text(
+          "Continue",
+          style: GoogleFonts.poppins(fontSize: 12.h, color: Colors.white, fontWeight: FontWeight.bold),
+        )),
       ),
     );
   }

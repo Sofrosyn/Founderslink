@@ -17,7 +17,6 @@ class _LoginState extends State<Login> {
     return SafeArea(
         bottom: false,
         top: false,
-        maintainBottomViewPadding: true,
         child: Scaffold(
           backgroundColor: Colors.white,
           body: Center(
