@@ -158,7 +158,9 @@ class _LoginState extends State<Login> {
       height: 50.h,
       decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(10.h)), color: AppColor.nblue),
       child: GestureDetector(
-        onTap: () {},
+        onTap: () {
+
+        },
         child: Center(
             child: Text(
           "Sign Up",

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:founderslink/view/auth/login.dart';
+import 'package:founderslink/view/login_sequence/views/login/login.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 void main() {
