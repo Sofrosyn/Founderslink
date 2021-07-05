@@ -13,15 +13,86 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3c1f962-d87a-4008-a9e6-ce602c930728" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/core/data/local/constants.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/core/data/local/sharedpreference.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/core/di/authentication_module/authentication_module_injector.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/core/di/authentication_module/authentication_module_injector.g.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/core/di/injector.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/core/di/network_module/network_module_injector.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/core/di/network_module/network_module_injector.g.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/core/enum/View_state.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/core/enum/type.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/core/error/faliure.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/core/navigator/navigator_bloc.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/core/navigator/navigator_event.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/core/network/network_service.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/core/ui/routes/routes_generator.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/core/ui/success.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/core/ui/widgets/custom_address.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/core/ui/widgets/error_widget.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/core/ui/widgets/progress_dialog.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/core/ui/widgets/toast.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/core/usecase/base_usecase.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/core/view_model/base/base_view_model.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ui/authentication/bloc/authentication_bloc.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ui/authentication/bloc/authentication_event.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ui/authentication/bloc/authentication_state.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ui/authentication/data/remote/authentication_remote.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ui/authentication/data/repo/authentication_repository_implementation.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ui/authentication/data/repo/authentication_respository.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ui/authentication/models/goals_response.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ui/authentication/models/interests_response.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ui/authentication/models/location_response.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ui/authentication/models/login_model.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ui/authentication/models/niche_and_industry_response.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ui/authentication/models/pronouns_response.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ui/authentication/models/signup_response.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ui/authentication/models/universities_model.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ui/authentication/views/profile/address_search.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/utils/constant.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/utils/dateutils.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/utils/extensions.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/utils/pallet.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/utils/utils.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/generated_plugin_registrant.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated_plugin_registrant.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/view/login_sequence/views/login/login.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view/login_sequence/views/login/login.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/utils/ui/activeLobbies.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/ui/activeLobbies.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/auth/checkEmail.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/auth/checkEmail.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/auth/login.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/auth/login.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/auth/register.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/auth/register.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/auth/settingEmail.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/auth/settingEmail.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/login_sequence/heplerclass.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/authentication/heplerclass.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/login_sequence/views/login/login.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/authentication/views/login/login.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/login_sequence/views/login/login_founder/login_founder.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/authentication/views/profile/select_niche_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/login_sequence/views/login/login_founder/login_founder2.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/authentication/views/profile/company_details_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/login_sequence/views/login/login_investor/login_investor.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/authentication/views/login/login_investor/login_investor.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/login_sequence/views/login/login_member/login_member.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/authentication/views/login/login_member/login_member.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/login_sequence/views/login/login_student/login_student.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/authentication/views/login/login_student/login_student.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/login_sequence/views/login/login_student/login_student2.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/authentication/views/login/login_student/login_student2.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/login_sequence/views/meeting/join_meeting.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/authentication/views/meeting/join_meeting.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/login_sequence/views/meeting/meeting_frame.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/authentication/views/meeting/meeting_frame.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/login_sequence/views/profile/set_profile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/authentication/views/profile/edit_profile_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/login_sequence/views/signup/confirmation.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/authentication/views/signup/confirmation.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/login_sequence/views/signup/signup.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/authentication/views/signup/signup.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/pages/Home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/pages/Home.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/pages/audio_call_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/pages/audio_call_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/pages/chat.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/pages/chat.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/pages/chatFilter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/pages/chatFilter.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/pages/chatHomepage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/pages/chatHomepage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/pages/chatLobby.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/pages/chatLobby.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/pages/companies.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/pages/companies.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/pages/completeProfile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/pages/completeProfile.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/pages/people.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/pages/people.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view/pages/resource.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/pages/resource.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +110,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Dev" />
+        <entry key="$PROJECT_DIR$" value="irf/loginSeq" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -53,8 +124,19 @@
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/android" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Mytrip" />
     <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\newFlutterProjects\Founders-Link-API\lib\ui\authentication\views\profile" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\newFlutterProjects\Founders-Link-API\lib\core\di\network_module" />
+      <recent name="C:\newFlutterProjects\Founders-Link-API\lib\core\di\authentication_module" />
+      <recent name="C:\newFlutterProjects\Founders-Link-API\lib\core\data" />
+      <recent name="C:\newFlutterProjects\Founders-Link-API\lib" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -71,37 +153,61 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="488" y="80" key="#com.intellij.ide.util.MemberChooser" timestamp="1623595502817">
+    <state x="488" y="80" key="#com.intellij.ide.util.MemberChooser" timestamp="1625480537418">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="80" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1623595502817" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1623602701284">
+    <state x="488" y="80" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1625480537418" />
+    <state x="350" y="288" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1624888502931">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1623602701284" />
+    <state x="350" y="288" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1624888502931" />
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1624894725375">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1624894725375" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1625296220383">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1625296220383" />
     <state x="538" y="257" key="Github.ShareDialog" timestamp="1623657554226">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="538" y="257" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1623657554226" />
-    <state width="1323" height="239" key="GridCell.Tab.0.bottom" timestamp="1624872026968">
+    <state width="1323" height="235" key="GridCell.Tab.0.bottom" timestamp="1625481806766">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="239" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1624872026968" />
-    <state width="1323" height="239" key="GridCell.Tab.0.center" timestamp="1624872026966">
+    <state width="1323" height="235" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1625481806766" />
+    <state width="1323" height="235" key="GridCell.Tab.0.center" timestamp="1625481806765">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="239" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1624872026966" />
-    <state width="1323" height="239" key="GridCell.Tab.0.left" timestamp="1624872026965">
+    <state width="1323" height="235" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1625481806765" />
+    <state width="1323" height="235" key="GridCell.Tab.0.left" timestamp="1625481806764">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="239" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1624872026965" />
-    <state width="1323" height="239" key="GridCell.Tab.0.right" timestamp="1624872026967">
+    <state width="1323" height="235" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1625481806764" />
+    <state width="1323" height="235" key="GridCell.Tab.0.right" timestamp="1625481806765">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="239" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1624872026967" />
+    <state width="1323" height="235" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1625481806765" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1624875970728">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1624875970728" />
     <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1623519962489">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1623519962489" />
+    <state x="390" y="97" width="585" height="534" key="find.popup" timestamp="1625248354077">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="390" y="97" width="585" height="534" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1625248354077" />
+    <state x="339" y="164" key="run.anything.popup" timestamp="1625479364484">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="164" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1625479364484" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1625254391916">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1625254391916" />
   </component>
 </project>
