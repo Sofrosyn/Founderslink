@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:founder_link/views/connection_list/connection_list.dart';
+import 'package:founder_link/views/profile/profile_edit.dart';
+import 'package:founder_link/views/profile/profile_settings.dart';
+import 'package:founder_link/views/profile/user_profile.dart';
 import 'package:get/get.dart';
 import 'views/login/login.dart';
 
@@ -27,7 +31,7 @@ class _MyAppState extends State<MyApp> {
           primaryColor: Colors.black,
           accentColor: Colors.black,
         ),
-        home: Login(),
+        home: ConnectionList(),
       ),
     );
   }

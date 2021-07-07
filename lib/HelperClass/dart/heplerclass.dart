@@ -7,12 +7,28 @@ class AppImages {
   static const profile = 'images/profile.png';
   static const founder = 'images/founder.png';
   static const team = 'images/team.png';
+  static const ellipse = 'images/ellipse.png';
+  static const social_1 = 'images/social.png';
+  static const user_1 = 'images/user_1.png';
+  static const subscription_1 = 'images/subscription_1.png';
+  static const emoj_waving = 'images/emoj_waving-hand.png';
+  static const emoji_crying = 'images/emoji_crying-face.png';
+  static const public = 'images/public.png';
+  static const private = 'images/private.png';
+  static const ping = 'images/ping.png';
+  static const msg = 'images/msg.png';
+  static const filter = 'images/filter.png';
 }
 
 class AppColor {
   static const bg = const Color(0xffE5E5E5);
   static const nblue = const Color(0xff47D7F6);
   static const purple = const Color(0xffBF7EFF);
+  static const grey = const Color(0xffEAE6E6);
+  static const blue = const Color(0xff0B69F5);
+    static const blueLight = const Color(0xff1FAFEC);
+    static const greenLight = const Color(0xff80FF6B);
+
 }
 
 List<String> industryList = [
@@ -162,3 +178,25 @@ List<String> pronounsList = [
     "Ze/zie",
     "Ze/zi",
   ];
+
+  
+  Widget buildChip(String label, var img) {
+    return Chip(
+      labelPadding: EdgeInsets.all(2.0),
+      avatar: Image.asset(
+        img,
+        width: 30,
+        height: 30,
+      ),
+      label: Text(
+        label,
+        style: TextStyle(
+          color: Colors.black,
+        ),
+      ),
+      backgroundColor: Colors.grey[200],
+      elevation: 1.0,
+      shadowColor: Colors.grey[60],
+      padding: EdgeInsets.all(5.0),
+    );
+  }

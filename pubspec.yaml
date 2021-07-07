@@ -33,7 +33,8 @@ dependencies:
   google_fonts: ^2.1.0
   dropdown_search: ^0.4.9
   image_picker_widget: ^1.0.2
-
+  cart_stepper: ^1.0.0
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
