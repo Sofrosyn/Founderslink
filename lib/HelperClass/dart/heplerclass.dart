@@ -18,6 +18,11 @@ class AppImages {
   static const ping = 'images/ping.png';
   static const msg = 'images/msg.png';
   static const filter = 'images/filter.png';
+  static const ic_home = 'images/ic_home.png';
+  static const ic_group = 'images/ic_group.png';
+  static const ic_profile = 'images/ic_profile.png';
+  static const ic_chat = 'images/ic_chat.png';
+  static const ic_floor = 'images/floor.png';
 }
 
 class AppColor {

@@ -91,38 +91,35 @@ class _ProfileSettingsState extends State<ProfileSettings> with SingleTickerProv
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-    return SafeArea(
-        bottom: false,
-        top: false,
-        child: Scaffold(
-          backgroundColor: Colors.white,
-          body: Stack(
-            children: [
-              Container(
-                height: size.height / 6,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(AppImages.ellipse),
-                    fit: BoxFit.fill,
-                  ),
-                ),
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 10.0),
+      child: Stack(
+        children: [
+          Container(
+            height: size.height / 6,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(AppImages.ellipse),
+                fit: BoxFit.fill,
               ),
-              Container(
-                padding: EdgeInsets.only(top: 30),
-                margin: EdgeInsets.only(bottom: 30),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    _logo(),
-                    _profile(),
-                    _tabBar(),
-                    _tabBarView(),
-                  ],
-                ),
-              ),
-            ],
+            ),
           ),
-        ));
+          Container(
+            padding: EdgeInsets.only(top: 30),
+            margin: EdgeInsets.only(bottom: 30),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                _logo(),
+                _profile(),
+                _tabBar(),
+                _tabBarView(),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
   }
 
   Widget _logo() {
@@ -156,7 +153,6 @@ class _ProfileSettingsState extends State<ProfileSettings> with SingleTickerProv
           // Should not used it as it only called when tab options are clicked,
           // not when user swapped
         },
-        
         controller: _controller,
         tabs: list,
       ),
@@ -166,7 +162,6 @@ class _ProfileSettingsState extends State<ProfileSettings> with SingleTickerProv
   Widget _tabBarView() {
     return Expanded(
       child: TabBarView(
-        
         controller: _controller,
         children: [
           SocialTab(),
