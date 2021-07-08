@@ -23,6 +23,10 @@ class AppImages {
   static const ic_profile = 'images/ic_profile.png';
   static const ic_chat = 'images/ic_chat.png';
   static const ic_floor = 'images/floor.png';
+
+   static const background_office = 'images/office_background.jpg';
+  static const team_member = 'images/team_member.jpg';
+  static const bgcover = 'images/cover.jpg';
 }
 
 class AppColor {
@@ -34,6 +38,11 @@ class AppColor {
     static const blueLight = const Color(0xff1FAFEC);
     static const greenLight = const Color(0xff80FF6B);
 
+  static const chip = const Color(0xffFFBE18); //
+  static const chipblue = const Color(0xff5EF4FE);
+  static const chipyellow = const Color(0xffFFB74A);
+  static const box = const Color(0xffF6F3F3);//
+  static const investor = const Color(0xffB257D2);
 }
 
 List<String> industryList = [
@@ -185,10 +194,10 @@ List<String> pronounsList = [
   ];
 
   
-  Widget buildChip(String label, var img) {
+  Widget buildChip(String label,  {img, color}) {
     return Chip(
-      labelPadding: EdgeInsets.all(2.0),
-      avatar: Image.asset(
+      // labelPadding: EdgeInsets.all(2.0),
+      avatar: img==null?null: Image.asset(
         img,
         width: 30,
         height: 30,
@@ -199,9 +208,9 @@ List<String> pronounsList = [
           color: Colors.black,
         ),
       ),
-      backgroundColor: Colors.grey[200],
+      backgroundColor:color?? Colors.grey[200],
       elevation: 1.0,
       shadowColor: Colors.grey[60],
-      padding: EdgeInsets.all(5.0),
+      // padding: EdgeInsets.fromLTRB(10, 0, 10,  0),
     );
   }

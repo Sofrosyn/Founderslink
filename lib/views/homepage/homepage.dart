@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:founder_link/HelperClass/dart/heplerclass.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:founder_link/views/profile/profile_settings.dart';
+import 'package:founder_link/views/profile/profile_student/profile_student.dart';
 
 class Homepage extends StatefulWidget {
   static String route = "/homepage";
@@ -26,7 +27,7 @@ class _HomepageState extends State<Homepage> {
     Container(
       child: Center(child: Text("People")),
     ),
-    ProfileSettings(),
+    ProfileStudent(),
   ];
 
   @override
