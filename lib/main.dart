@@ -33,7 +33,7 @@ class _MyAppState extends State<MyApp> {
           primaryColor: Colors.black,
           accentColor: Colors.black,
         ),
-        home: ProfileStudent(),
+        home: Homepage(),
       ),
     );
   }

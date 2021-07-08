@@ -20,34 +20,50 @@ class _ProfileStudentState extends State<ProfileStudent> {
       top: false,
       child: Scaffold(
         //  bottomNavigationBar: bottombar(),
-        body: Container(
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage(
-                'images/office_background.jpg',
+        body: Stack(
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                // color: Colors.grey.withOpacity(0.5),
+                image: DecorationImage(
+                  image: AssetImage(
+                    AppImages.bg_student,
+                  ),
+                  fit: BoxFit.fill,
+                ),
               ),
-              fit: BoxFit.cover,
             ),
-          ),
-          child: SingleChildScrollView(
-            padding: EdgeInsets.all(10),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                _logo(),
-                _profile(),
-                _chipBlockVc(),
-                _experience(),
-                _raisedBtn(),
-                _interestText(),
-                _industry(),
-                _officeTxt(),
-                _officeDetails(),
-                _pastevents(),
-                _meetUp()
-              ],
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.grey.withOpacity(0.5),
+                // image: DecorationImage(
+                //   image: AssetImage(
+                //     AppImages.bg_student,
+                //   ),
+                //   fit: BoxFit.fill,
+                // ),
+              ),
+              child: SingleChildScrollView(
+                padding: EdgeInsets.fromLTRB(10, 40, 10, 30),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    _logo(),
+                    _profile(),
+                    _chipBlockVc(),
+                    _experience(),
+                    _raisedBtn(),
+                    _interestText(),
+                    _industry(),
+                    _officeTxt(),
+                    _officeDetails(),
+                    _pastevents(),
+                    _meetUp()
+                  ],
+                ),
+              ),
             ),
-          ),
+          ],
         ),
       ),
     );
@@ -92,21 +108,19 @@ class _ProfileStudentState extends State<ProfileStudent> {
                   Text(
                     "(She/Her)",
                     style: GoogleFonts.poppins(
-                        color: Colors.lightBlueAccent, fontSize: 12.sp, fontWeight: FontWeight.w600),
+                        color:  Color(0xff5EF4FE), fontSize: 12.sp, fontWeight: FontWeight.w600),
                   )
                 ],
               ),
               Text(
                 "CEO / Founder @ Silicon Valley ",
                 style: GoogleFonts.poppins(
-                  color: Colors.grey,
                   fontSize: 10.sp,
                 ),
               ),
               Text(
                 "Dener,CO",
                 style: GoogleFonts.poppins(
-                  color: Colors.grey,
                   fontSize: 10.sp,
                 ),
               ),
@@ -191,7 +205,7 @@ class _ProfileStudentState extends State<ProfileStudent> {
         Expanded(
           child: OutlinedButton(
             style: OutlinedButton.styleFrom(
-                side: BorderSide(
+              backgroundColor: Colors.white,    side: BorderSide(
               color: Colors.green,
             )),
             onPressed: () {},
@@ -252,7 +266,9 @@ class _ProfileStudentState extends State<ProfileStudent> {
           ),
           Text(
             "Lorem ispum dolor sit amet, conseteture adipiscing elit. Cros auctor lorem eget finibus pretiurm. Ut conseteture mattis ispum id lacinia",
-            style: GoogleFonts.poppins(fontSize: 10.sp, color: Colors.grey),
+            style: GoogleFonts.poppins(
+              fontSize: 10.sp,
+            ),
           )
         ],
       ),
@@ -267,8 +283,9 @@ class _ProfileStudentState extends State<ProfileStudent> {
         children: [
           Expanded(
             child: Column(
-             crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.start,   children: [
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
                 Text(
                   "Im...",
                   style: GoogleFonts.poppins(fontSize: 16.sp, fontWeight: FontWeight.bold),
@@ -278,16 +295,14 @@ class _ProfileStudentState extends State<ProfileStudent> {
                   "Interest...",
                   style: GoogleFonts.poppins(fontSize: 16.sp, fontWeight: FontWeight.bold),
                 ),
-
-                   Wrap(
-                direction: Axis.vertical,
-                children: [
-                 buildChip("Abgle investing"),
-                buildChip("Co-Founding"),
-                buildChip("Team Building"),
-                ],
-              ),
-               
+                Wrap(
+                  direction: Axis.vertical,
+                  children: [
+                    buildChip("Abgle investing"),
+                    buildChip("Co-Founding"),
+                    buildChip("Team Building"),
+                  ],
+                ),
               ],
             ),
           ),

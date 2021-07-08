@@ -24,9 +24,10 @@ class AppImages {
   static const ic_chat = 'images/ic_chat.png';
   static const ic_floor = 'images/floor.png';
 
-   static const background_office = 'images/office_background.jpg';
-  static const team_member = 'images/team_member.jpg';
-  static const bgcover = 'images/cover.jpg';
+   static const bg_investor = 'images/bg_investor.jpg';
+  static const bg_member = 'images/bg_member.jpg';
+  static const bg_student = 'images/bg_student.jpg';
+  static const bg = 'images/bg.png';
 }
 
 class AppColor {
@@ -124,7 +125,7 @@ List<String> goalsList = [
   "Looking for interns",
   "Looking for Advisors/ Mentors",
   "Looking for Advisees / Mentees",
-  "Looking for domain experts ",
+  "Looking for domain experts",
   "Looking for beta users / feedback",
   "Looking to discover people in my niche",
   "Looking to discover people with similar interests",

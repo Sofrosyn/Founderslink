@@ -77,7 +77,7 @@ class _LoginFounder2State extends State<LoginFounder2> {
               margin: EdgeInsets.all(5.h),
               child: TextField(
                 decoration: InputDecoration(
-                    hintText: "Founders Link",
+                    hintText: "",
                     fillColor: Colors.white,
                     hintStyle: TextStyle(color: Colors.black),
                     border: InputBorder.none),
@@ -114,7 +114,7 @@ class _LoginFounder2State extends State<LoginFounder2> {
               margin: EdgeInsets.all(5.h),
               child: TextField(
                 decoration: InputDecoration(
-                    hintText: "CMO", hintStyle: TextStyle(color: Colors.black), border: InputBorder.none),
+                    hintText: "", hintStyle: TextStyle(color: Colors.black), border: InputBorder.none),
               ),
             ),
           ),
