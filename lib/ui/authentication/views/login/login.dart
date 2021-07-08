@@ -68,13 +68,13 @@ class _LoginState extends State<Login> {
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    _logo(),
+                    AppImages.logoWidget,
                     _text(),
                     _email(),
                     _password(),
                     _loginbtn(),
                     _signuptn(),
-                    _meetingbtn(),
+                    //_meetingbtn(),
                   ],
                 ),
               ),
@@ -84,7 +84,9 @@ class _LoginState extends State<Login> {
   }
 
   Widget _logo() {
-    return Container(
+    return SizedBox(
+      width: 100.w,
+      height: 10.h,
       child: Image.asset(AppImages.logo),
     );
   }
@@ -117,7 +119,8 @@ class _LoginState extends State<Login> {
                   fontWeight: FontWeight.bold, fontSize: 12.h),
             ),
           ),
-          Container(
+          Container(height: 40.h,
+
             margin: EdgeInsets.only(
               top: 5.h,
               left: 20.h,
@@ -165,6 +168,7 @@ class _LoginState extends State<Login> {
             ),
           ),
           Container(
+            height: 40.h,
             margin:
                 EdgeInsets.only(top: 5.h, left: 20.h, right: 20.h, bottom: 2.h),
             decoration: BoxDecoration(
@@ -211,7 +215,7 @@ class _LoginState extends State<Login> {
 
             },
       child: Container(
-        margin: EdgeInsets.only(top: 40.h, left: 30.h, right: 30.h),
+        margin: EdgeInsets.only(top: 30.h, left: 20.w, right: 20.w),
         width: double.infinity,
         height: 50.h,
         decoration: BoxDecoration(
@@ -233,7 +237,7 @@ class _LoginState extends State<Login> {
         Get.to(() => Signup());
       },
       child: Container(
-        margin: EdgeInsets.only(top: 10.h, left: 30.h, right: 30.h),
+        margin: EdgeInsets.only(top: 10.h, left: 20.w, right: 20.w),
         width: double.infinity,
         height: 50.h,
         decoration: BoxDecoration(

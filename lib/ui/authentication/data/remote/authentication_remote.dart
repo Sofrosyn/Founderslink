@@ -80,7 +80,7 @@ abstract class AuthenticationRemoteDataSource extends NetworkService {
 class AuthenticationRemoteDatasourceImpl
     extends AuthenticationRemoteDataSource {
   AuthenticationRemoteDatasourceImpl(Dio dioClient) : super(dioClient);
-  static final String apiKey1 = 'AIzaSyBeduVL1B14Vb7gCyU6UDrnwrvhc0ki_7Y';
+  static final String apiKey1 = 'AIzaSyCJu2eQBIfx15St_qgpczt_QRhOtHcWhLE';//'AIzaSyBeduVL1B14Vb7gCyU6UDrnwrvhc0ki_7Y';
   static const String apiKey = "AIzaSyAv_1SgIPkKVdzQJ21qFQx6W2hSzzgeKG8";
 
   @override
@@ -120,6 +120,7 @@ class AuthenticationRemoteDatasourceImpl
         if (response.data['status'] == 'OK') {
           final components =
               response.data['result']['address_components'] as List<dynamic>;
+
           // build result
           final place = Place();
           components.forEach((c) {

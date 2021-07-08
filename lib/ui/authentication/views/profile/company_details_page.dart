@@ -146,7 +146,7 @@ class _CompanyDetailsPageState extends State<CompanyDetailsPage> {
               child: TextField(
                 controller: _companyNameTextEditingController,
                 decoration: InputDecoration(
-                    hintText: "Founders Link",
+                    hintText: "",
                     fillColor: Colors.white,
                     hintStyle: TextStyle(color: Colors.black),
                     border: InputBorder.none),
@@ -187,7 +187,7 @@ class _CompanyDetailsPageState extends State<CompanyDetailsPage> {
               child: TextField(
                 controller: _titleTextEditingController,
                 decoration: InputDecoration(
-                    hintText: "CMO",
+                    hintText: "",
                     hintStyle: TextStyle(color: Colors.black),
                     border: InputBorder.none),
               ),

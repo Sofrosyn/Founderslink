@@ -1,14 +1,22 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppImages {
-  static const logo = 'assets/images/logo.png';
+  static const logo = 'assets/images/logo.jpg';
   static const graduate = 'assets/images/graduated.png';
   static const profile = 'assets/images/profile.png';
   static const founder = 'assets/images/founder.png';
   static const team = 'assets/images/team.png';
 
+  static Widget logoWidget = SizedBox(
+    width: 100.w,
+    height: 100.h,
+    child: Image.asset('assets/images/logo.jpg'),
+  );
 }
+
+
 
 class AppColor {
   static const bg = const Color(0xffE5E5E5);
@@ -140,39 +148,39 @@ List<String> experineceList = [
 ];
 
 List<String> pronounsList = [
-    "Any pronouns",
-    "He/Him",
-    "Co/Co",
-    "Dhey/Dhem",
-    "Elle/Elles",
-    "Elle/he",
-    "Elle/they",
-    "En/En",
-    "Ey/En",
-    "Ey/em",
-    "Fey/fem",
-    "He/Him",
-    "Hir/Hirs",
-    "MySelf",
-    "Per/per",
-    "She/her",
-    "She/he",
-    "They/he",
-    "They/she",
-    "They/she/he",
-    "They/them",
-    "Vae/vem",
-    "Ve/ver",
-    "Ve/vis",
-    "Xe/him",
-    "Xe/she",
-    "Xe/he/she",
-    "Xe/he/they",
-    "Xe/she/they",
-    "Xe/they",
-    "Xe/xem ",
-    "Xie/hir",
-    "Yo/yo",
-    "Ze/zie",
-    "Ze/zi",
-  ];
+  "Any pronouns",
+  "He/Him",
+  "Co/Co",
+  "Dhey/Dhem",
+  "Elle/Elles",
+  "Elle/he",
+  "Elle/they",
+  "En/En",
+  "Ey/En",
+  "Ey/em",
+  "Fey/fem",
+  "He/Him",
+  "Hir/Hirs",
+  "MySelf",
+  "Per/per",
+  "She/her",
+  "She/he",
+  "They/he",
+  "They/she",
+  "They/she/he",
+  "They/them",
+  "Vae/vem",
+  "Ve/ver",
+  "Ve/vis",
+  "Xe/him",
+  "Xe/she",
+  "Xe/he/she",
+  "Xe/he/they",
+  "Xe/she/they",
+  "Xe/they",
+  "Xe/xem ",
+  "Xie/hir",
+  "Yo/yo",
+  "Ze/zie",
+  "Ze/zi",
+];

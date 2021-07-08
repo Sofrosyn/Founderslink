@@ -21,9 +21,8 @@ class LoginPayload {
   String firstName;
   String lastName;
   String email;
-  Null type;
-  Null pronounId;
-  Null emailVerifiedAt;
+  String type;
+  String pronounId;
   String createdAt;
   String updatedAt;
   String token;
@@ -35,7 +34,6 @@ class LoginPayload {
         this.email,
         this.type,
         this.pronounId,
-        this.emailVerifiedAt,
         this.createdAt,
         this.updatedAt,
         this.token});
@@ -45,9 +43,8 @@ class LoginPayload {
     firstName = json['first_name'];
     lastName = json['last_name'];
     email = json['email'];
-    type = json['type'];
-    pronounId = json['pronoun_id'];
-    emailVerifiedAt = json['email_verified_at'];
+    if(json['type']!=null){type = json['type'];}
+    //if(json['pronoun_id']!=null){pronounId = json['pronoun_id'];}
     createdAt = json['created_at'];
     updatedAt = json['updated_at'];
     token = json['token'];
@@ -61,7 +58,6 @@ class LoginPayload {
     data['email'] = this.email;
     data['type'] = this.type;
     data['pronoun_id'] = this.pronounId;
-    data['email_verified_at'] = this.emailVerifiedAt;
     data['created_at'] = this.createdAt;
     data['updated_at'] = this.updatedAt;
     data['token'] = this.token;

@@ -25,6 +25,20 @@ class _SignupState extends State<Signup> {
 
   final _bloc= AuthenticationBloc();
   final _formKey = GlobalKey<FormState>();
+  final FocusNode myFocusNodePasswordLogin = FocusNode();
+  bool _obscurePasswordText = true;
+  bool _obscureConfirmPasswordText = true;
+  void _togglePassword() {
+    setState(() {
+      _obscurePasswordText = !_obscurePasswordText;
+    });
+  }
+
+  void _toggleConfirmPassword() {
+    setState(() {
+      _obscureConfirmPasswordText = !_obscureConfirmPasswordText;
+    });
+  }
 
   @override
   void dispose() {
@@ -60,7 +74,7 @@ class _SignupState extends State<Signup> {
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  _logo(),
+                  AppImages.logoWidget,//_logo(),
                   _fname(),
                   _lastname(),
                   _workemail(),
@@ -84,9 +98,10 @@ class _SignupState extends State<Signup> {
 
   Widget _fname() {
     return Container(
-      margin: EdgeInsets.only(top: 10.h),
+      margin: EdgeInsets.only(top: 5.h),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize:MainAxisSize.min,
         children: [
           Container(
             margin: EdgeInsets.only(
@@ -100,6 +115,7 @@ class _SignupState extends State<Signup> {
             ),
           ),
           Container(
+            height: 40.h,
             margin: EdgeInsets.only(
               top: 5.h,
               left: 20.h,
@@ -141,6 +157,7 @@ class _SignupState extends State<Signup> {
             ),
           ),
           Container(
+            height: 40.h,
             margin: EdgeInsets.only(
               top: 5.h,
               left: 20.h,
@@ -149,6 +166,7 @@ class _SignupState extends State<Signup> {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(5.h)), border: Border.all(color: Colors.grey[400])),
             child: Container(
+
               margin: EdgeInsets.all(5.h),
               child: TextField(
                 onChanged: (value){
@@ -186,6 +204,7 @@ class _SignupState extends State<Signup> {
             ),
           ),
           Container(
+            height: 40.h,
             margin: EdgeInsets.only(top: 5.h, left: 20.h, right: 20.h, bottom: 2.h),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(5.h)), border: Border.all(color: Colors.grey[400])),
@@ -226,17 +245,24 @@ class _SignupState extends State<Signup> {
             ),
           ),
           Container(
+            height: 40.h,
             margin: EdgeInsets.only(top: 5.h, left: 20.h, right: 20.h, bottom: 2.h),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(5.h)), border: Border.all(color: Colors.grey[400])),
             child: Container(
               margin: EdgeInsets.all(5.h),
               child: TextField(
+                obscureText:_obscurePasswordText,
                 onChanged: (value){
                   _passwordText = value;
 
                 },
                 decoration: InputDecoration(
+                    suffixIcon: InkWell(
+                        onTap: () {
+                          _togglePassword();
+                        },
+                        child: _obscurePasswordText? Icon(Icons.remove_red_eye): Icon(Icons.remove_red_eye_outlined)),
                     hintText: "**********",
                     fillColor: Colors.white,
                     hintStyle: TextStyle(color: Colors.grey[200]),
@@ -267,17 +293,25 @@ class _SignupState extends State<Signup> {
             ),
           ),
           Container(
+            height: 40.h,
             margin: EdgeInsets.only(top: 5.h, left: 20.h, right: 20.h, bottom: 2.h),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(5.h)), border: Border.all(color: Colors.grey[400])),
             child: Container(
               margin: EdgeInsets.all(5.h),
               child: TextField(
+                obscureText:_obscureConfirmPasswordText,
                 onChanged: (value){
                   _confirmPasswordText = value;
 
                 },
                 decoration: InputDecoration(
+                    suffixIcon: InkWell(
+                        onTap: () {
+                          _toggleConfirmPassword();
+                        },
+                        child: _obscureConfirmPasswordText? Icon(Icons.remove_red_eye): Icon(Icons.remove_red_eye_outlined)),
+
                     hintText: "**********",
                     fillColor: Colors.white,
                     hintStyle: TextStyle(color: Colors.grey[200]),
@@ -297,9 +331,9 @@ class _SignupState extends State<Signup> {
   Widget _continueBtn() {
     return GestureDetector(
       onTap: () {
-        // if(hasText){
+
           _bloc.add(SignupEvent(lName: _lName, fName: _fName, password: _passwordText, email: _emailText, password_confirmation: _confirmPasswordText));
-        // }else{
+
         //   if(_emailText.isEmpty){
         //     flutterToast('Please Enter a valid Email', true);
         //   }else if(!_passwordText.isStrongPassword){
@@ -313,7 +347,7 @@ class _SignupState extends State<Signup> {
 
       },
       child: Container(
-        margin: EdgeInsets.only(top: 40.h, left: 30.h, right: 30.h),
+        margin: EdgeInsets.only(top: 30.h, left: 20.w, right: 20.w),
         width: double.infinity,
         height: 50.h,
         decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(10.h)), color: Colors.black),
