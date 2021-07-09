@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:founderslink/room/room_screen.dart';
-import 'package:founderslink/view/pages/chatLobby.dart';
+import 'package:founderslink/ui/pages/chatLobby.dart';
 import 'package:founderslink/widgets/joinButton.dart';
 import 'package:founderslink/widgets/startsButton.dart';
 import 'package:agora_rtc_engine/rtc_engine.dart';

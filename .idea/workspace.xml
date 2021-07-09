@@ -13,13 +13,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3c1f962-d87a-4008-a9e6-ce602c930728" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/android/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/.idea/runConfigurations.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.idea/modules/android.iml" beforeDir="false" afterPath="$PROJECT_DIR$/android/.idea/modules/android.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,10 +28,13 @@
       </list>
     </option>
   </component>
+  <component name="Git.Pull.Settings">
+    <option name="BRANCH" value="irf/loginSeq" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="irf/loginSeq" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -51,8 +48,19 @@
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/android" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Mytrip" />
     <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\newFlutterProjects\Founders-Link-API\lib\ui\authentication\views\profile" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\newFlutterProjects\Founders-Link-API\lib\core\di\network_module" />
+      <recent name="C:\newFlutterProjects\Founders-Link-API\lib\core\di\authentication_module" />
+      <recent name="C:\newFlutterProjects\Founders-Link-API\lib\core\data" />
+      <recent name="C:\newFlutterProjects\Founders-Link-API\lib" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -69,37 +77,61 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="488" y="80" key="#com.intellij.ide.util.MemberChooser" timestamp="1623595502817">
+    <state x="488" y="80" key="#com.intellij.ide.util.MemberChooser" timestamp="1625480537418">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="80" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1623595502817" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1623602701284">
+    <state x="488" y="80" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1625480537418" />
+    <state x="350" y="288" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1624888502931">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1623602701284" />
+    <state x="350" y="288" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1624888502931" />
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1624894725375">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1624894725375" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1625296220383">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1625296220383" />
     <state x="538" y="257" key="Github.ShareDialog" timestamp="1623657554226">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="538" y="257" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1623657554226" />
-    <state width="1306" height="236" key="GridCell.Tab.0.bottom" timestamp="1623724360081">
+    <state width="1323" height="235" key="GridCell.Tab.0.bottom" timestamp="1625756888541">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="236" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1623724360081" />
-    <state width="1306" height="236" key="GridCell.Tab.0.center" timestamp="1623724360067">
+    <state width="1323" height="235" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1625756888541" />
+    <state width="1323" height="235" key="GridCell.Tab.0.center" timestamp="1625756888539">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="236" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1623724360067" />
-    <state width="1306" height="236" key="GridCell.Tab.0.left" timestamp="1623724360021">
+    <state width="1323" height="235" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1625756888539" />
+    <state width="1323" height="235" key="GridCell.Tab.0.left" timestamp="1625756888477">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="236" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1623724360020" />
-    <state width="1306" height="236" key="GridCell.Tab.0.right" timestamp="1623724360068">
+    <state width="1323" height="235" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1625756888477" />
+    <state width="1323" height="235" key="GridCell.Tab.0.right" timestamp="1625756888540">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="236" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1623724360068" />
+    <state width="1323" height="235" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1625756888540" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1625747027051">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1625747027051" />
     <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1623519962489">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1623519962489" />
+    <state x="390" y="97" width="585" height="534" key="find.popup" timestamp="1625516494632">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="390" y="97" width="585" height="534" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1625516494632" />
+    <state x="339" y="164" key="run.anything.popup" timestamp="1625746045126">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="164" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1625746045126" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1625254391916">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1625254391916" />
   </component>
 </project>
