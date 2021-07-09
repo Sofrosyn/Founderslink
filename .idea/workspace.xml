@@ -13,46 +13,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3c1f962-d87a-4008-a9e6-ce602c930728" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/android/.idea/libraries/Gradle__androidx_asynclayoutinflater_asynclayoutinflater_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/.idea/libraries/Gradle__androidx_coordinatorlayout_coordinatorlayout_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/.idea/libraries/Gradle__androidx_cursoradapter_cursoradapter_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/.idea/libraries/Gradle__androidx_documentfile_documentfile_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/.idea/libraries/Gradle__androidx_drawerlayout_drawerlayout_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/.idea/libraries/Gradle__androidx_exifinterface_exifinterface_1_3_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/.idea/libraries/Gradle__androidx_interpolator_interpolator_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_ui_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_utils_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/.idea/libraries/Gradle__androidx_legacy_legacy_support_v4_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/.idea/libraries/Gradle__androidx_localbroadcastmanager_localbroadcastmanager_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/.idea/libraries/Gradle__androidx_media_media_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/.idea/libraries/Gradle__androidx_print_print_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/.idea/libraries/Gradle__androidx_slidingpanelayout_slidingpanelayout_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/.idea/libraries/Gradle__androidx_swiperefreshlayout_swiperefreshlayout_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/.idea/libraries/Gradle__org_mockito_mockito_core_1_10_19.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/.idea/modules/-273962524/android.flutter_plugin_android_lifecycle.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/.idea/modules/1712976821/android.fluttertoast.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/.idea/modules/1825929138/android.image_picker.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/.idea/modules/483600747/android.open_file.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/logo.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.idea/modules/app/android.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/android/.idea/modules/app/android.app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/authentication/data/remote/authentication_remote.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/authentication/data/remote/authentication_remote.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/authentication/heplerclass.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/authentication/heplerclass.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/authentication/models/login_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/authentication/models/login_model.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/authentication/views/login/login.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/authentication/views/login/login.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/authentication/views/profile/company_details_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/authentication/views/profile/company_details_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/authentication/views/signup/signup.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/authentication/views/signup/signup.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[SerialNumber@05ce6f3b0405]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[VirtualDevicePath@C:\Users\user\.android\avd\Pixel_2_API_24.avd]" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -126,26 +94,26 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="538" y="257" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1623657554226" />
-    <state width="1323" height="235" key="GridCell.Tab.0.bottom" timestamp="1625744228286">
+    <state width="1323" height="235" key="GridCell.Tab.0.bottom" timestamp="1625756888541">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="235" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1625744228286" />
-    <state width="1323" height="235" key="GridCell.Tab.0.center" timestamp="1625744228285">
+    <state width="1323" height="235" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1625756888541" />
+    <state width="1323" height="235" key="GridCell.Tab.0.center" timestamp="1625756888539">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="235" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1625744228285" />
-    <state width="1323" height="235" key="GridCell.Tab.0.left" timestamp="1625744228284">
+    <state width="1323" height="235" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1625756888539" />
+    <state width="1323" height="235" key="GridCell.Tab.0.left" timestamp="1625756888477">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="235" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1625744228284" />
-    <state width="1323" height="235" key="GridCell.Tab.0.right" timestamp="1625744228285">
+    <state width="1323" height="235" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1625756888477" />
+    <state width="1323" height="235" key="GridCell.Tab.0.right" timestamp="1625756888540">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="235" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1625744228285" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1624875970728">
+    <state width="1323" height="235" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1625756888540" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1625747027051">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1624875970728" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1625747027051" />
     <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1623519962489">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
