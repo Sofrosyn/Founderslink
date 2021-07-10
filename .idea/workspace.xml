@@ -12,8 +12,67 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3c1f962-d87a-4008-a9e6-ce602c930728" name="Default Changelist" comment="">
+    <list default="true" id="5a3f49c1-6892-4384-b6a5-997783ef79a5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/kotlin/com/example/founder_link/MainActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bg.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bg_investor.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bg_member.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/bg_student.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/ellipse.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/emoj_waving-hand.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/emoji_crying-face.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/filter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/floor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/founder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/graduated.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/ic_chat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/ic_group.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/ic_home.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/ic_profile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/msg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/ping.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/private.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/profile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/public.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/social.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/subscription_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/team.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/user_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/HelperClass/dart/heplerclass.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/views/connection_list/connection_list.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/views/homepage/homepage.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/views/login/login.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/views/login/login_founder/login_founder.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/views/login/login_founder/login_founder2.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/views/login/login_investor/login_investor.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/views/login/login_member/login_member.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/views/login/login_student/login_student.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/views/login/login_student/login_student2.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/views/meeting/join_meeting.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/views/meeting/meeting_frame.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/views/profile/profile_edit.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/views/profile/profile_settings.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/views/profile/profile_student/profile_student.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/views/profile/set_profile.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/views/profile/tab_items/profile_tab.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/views/profile/tab_items/social_tab.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/views/profile/tab_items/subcriptions_tab.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/views/profile/user_profile.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/views/signup/confirmation.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/views/signup/signup.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/widget_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25-Jun-21_12_00_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25-Jun-21_12_00_PM__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated_plugin_registrant.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated_plugin_registrant.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,10 +93,11 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="irf/loginSeq" />
+        <entry key="$PROJECT_DIR$" value="Dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SWAP_SIDES_IN_COMPARE_BRANCHES" value="true" />
   </component>
   <component name="ProjectId" id="1trBLFJWo0K7uNJYaimkpwCW0my" />
   <component name="ProjectViewState">
@@ -81,14 +141,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="488" y="80" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1625480537418" />
-    <state x="350" y="288" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1624888502931">
+    <state x="350" y="288" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1625928445919">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="350" y="288" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1624888502931" />
+    <state x="350" y="288" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1625928445919" />
     <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1624894725375">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1624894725375" />
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1625928493499">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1625928493499" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1625296220383">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -113,18 +177,34 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="235" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1625756888540" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1625747027051">
+    <state x="129" y="55" key="MergeDialog" timestamp="1625927845718">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1625747027051" />
+    <state x="129" y="55" key="MergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1625927845718" />
+    <state x="314" y="125" key="MultipleFileMergeDialog" timestamp="1625927873597">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="314" y="125" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1625927873597" />
+    <state x="92" y="92" width="1182" height="544" key="ShowDiffWithBranchDialog" timestamp="1625928493499">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="92" y="92" width="1182" height="544" key="ShowDiffWithBranchDialog/0.0.1366.728@0.0.1366.728" timestamp="1625928493499" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1625870967799">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1625870967799" />
     <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1623519962489">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1623519962489" />
-    <state x="390" y="97" width="585" height="534" key="find.popup" timestamp="1625516494632">
+    <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1625927565791">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="390" y="97" width="585" height="534" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1625516494632" />
+    <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1625927565791" />
+    <state x="390" y="97" width="585" height="534" key="find.popup" timestamp="1625928131861">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="390" y="97" width="585" height="534" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1625928131861" />
     <state x="339" y="164" key="run.anything.popup" timestamp="1625746045126">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

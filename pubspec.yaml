@@ -66,6 +66,7 @@ dependencies:
   agora_rtm: ^0.9.14
   password_validated_field: ^0.0.3
   multi_select_flutter: ^4.0.0
+  cart_stepper: ^1.0.0
 
 dev_dependencies:
   flutter_test:
