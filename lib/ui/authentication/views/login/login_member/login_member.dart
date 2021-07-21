@@ -28,7 +28,7 @@ class _LoginMemberState extends State<LoginMember> {
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  _logo(),
+                  AppImages.logoWidget,
                   _userText(),
                   _userType(),
                   _nicheText(),

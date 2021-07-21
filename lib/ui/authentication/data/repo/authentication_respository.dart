@@ -23,6 +23,7 @@ abstract class AuthenticationRepository {
   Future<Either<Failure, UniversitiesResponse>> getUniversities();
   Future<Either<Failure, NicheAndIndustriesResponse>> getNicheAndIndustries();
   Future<Either<Failure, GoalsResponse>> getGoals();
+  Future<void>logout();
   Future<Either<Failure, InterestsResponse>> getInterests();
   Future<Either<Failure, PronounsResponse>> getPronouns();
   Future<Either<Failure, void>> UploadProfilePhoto(File file);

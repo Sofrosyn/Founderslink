@@ -5,8 +5,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:founderslink/core/ui/widgets/progress_dialog.dart';
 import 'package:founderslink/core/ui/widgets/toast.dart';
 import 'package:founderslink/ui/authentication/bloc/authentication_bloc.dart';
+import 'package:founderslink/ui/authentication/views/profile/select_niche_page.dart';
 import 'package:founderslink/ui/authentication/views/signup/confirmation.dart';
 import 'package:founderslink/ui/authentication/views/signup/signup.dart';
+import 'package:founderslink/ui/controller/user_data_provider.dart';
 import 'package:founderslink/ui/pages/chat.dart';
 import 'package:founderslink/utils/extensions.dart';
 import 'package:get/get.dart';
@@ -34,6 +36,8 @@ class _LoginState extends State<Login> {
     });
   }
 
+  UserDataController userController = Get.find<UserDataController>();
+
   @override
   void dispose() {
     _bloc.close();
@@ -60,8 +64,11 @@ class _LoginState extends State<Login> {
 
               if (state is LoginSuccess) {
                 Navigator.pop(context);
-                Get.to(() => Confirmation());
-                //Get.to(() => Chat());
+                userController.getLoginPayload();
+
+              //  Get.to(() => Confirmation());
+                //Get.to(() => Chat());//Get.to(() => Confirmation());
+               userController.loginPayload.value.data.type!=null ? Get.to(() => Chat()):Get.to(() => Confirmation());
               }
             },
             child: Center(

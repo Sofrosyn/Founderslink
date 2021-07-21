@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:founderslink/utils/ui/founderlinklayout.dart';
-import 'package:founderslink/ui/auth/settingEmail.dart';
+import 'package:founderslink/ui/mics/settingEmail.dart';
 import 'package:founderslink/widgets/Button.dart';
 import 'package:google_fonts/google_fonts.dart';
 

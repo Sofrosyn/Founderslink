@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:founderslink/models/niche.dart';
 import 'package:founderslink/utils/ui/founderlinklayout.dart';
-import 'package:founderslink/ui/auth/checkEmail.dart';
-import 'package:founderslink/ui/auth/login.dart';
+import 'package:founderslink/ui/mics/checkEmail.dart';
+import 'package:founderslink/ui/mics/login.dart';
 import 'package:founderslink/widgets/Button.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:syncfusion_flutter_sliders/sliders.dart';

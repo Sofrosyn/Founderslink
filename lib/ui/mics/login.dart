@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:founderslink/utils/mixins/validation.dart';
 import 'package:founderslink/utils/ui/founderlinklayout.dart';
-import 'package:founderslink/ui/auth/register.dart';
+import 'package:founderslink/ui/mics/register.dart';
 import 'package:founderslink/ui/pages/chat.dart';
 import 'package:founderslink/ui/pages/chatHomepage.dart';
 import 'package:founderslink/ui/pages/completeProfile.dart';

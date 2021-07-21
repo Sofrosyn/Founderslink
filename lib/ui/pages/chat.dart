@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:founderslink/ui/controller/user_data_provider.dart';
 import 'package:founderslink/utils/ui/fab_bottom_app_bar.dart';
 import 'package:founderslink/utils/ui/fab_with_icons.dart';
 import 'package:founderslink/utils/ui/layout.dart';
-
-import 'package:founderslink/ui/pages/Home.dart';
 import 'package:founderslink/ui/pages/chatHomepage.dart';
-import 'package:founderslink/ui/pages/companies.dart';
-import 'package:founderslink/ui/pages/people.dart';
-import 'package:founderslink/ui/pages/resource.dart';
+import 'package:founderslink/ui/profile/presentation/profile_settings.dart';
+import 'package:founderslink/ui/profile/presentation/profile_student.dart';
+import 'package:founderslink/ui/profile/presentation/set_profile.dart';
+import 'package:get/get.dart';
+
 
 
 class Chat extends StatefulWidget {
@@ -21,8 +22,13 @@ class Chat extends StatefulWidget {
 
 class _ChatState extends State<Chat> with TickerProviderStateMixin {
   // String _lastSelected = 'TAB: 0';
+
+  final requestController = Get.put(UserDataController());
+
+
   int selectedpage = 0;
-  final _pageOptions = [Home(), ChatHomePage(), Home(), People(), Resource()];
+  final _pageOptions = [ChatHomePage(), ChatHomePage(), ChatHomePage(), ProfileStudent()//ProfileSettings(),//Resource()
+  ];
 
   void _selectedTab(int index) {
     setState(() {
@@ -111,8 +117,8 @@ class _ChatState extends State<Chat> with TickerProviderStateMixin {
         items: [
           FABBottomAppBarItem(iconData: Icons.home, text: "Home"),
           FABBottomAppBarItem(iconData: Icons.textsms_outlined, text: "Chats"),
-          FABBottomAppBarItem(iconData: Icons.people, text: "people"),
-          FABBottomAppBarItem(iconData: Icons.person_outlined, text: "profile"),
+          FABBottomAppBarItem(iconData: Icons.people, text: "People"),
+          FABBottomAppBarItem(iconData: Icons.person_outlined, text: "Profile"),
         ],
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,

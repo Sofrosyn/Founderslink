@@ -13,7 +13,7 @@ import 'package:founderslink/ui/authentication/models/niche_and_industry_respons
 import 'package:founderslink/ui/authentication/models/pronouns_response.dart';
 import 'package:founderslink/ui/authentication/models/signup_response.dart';
 import 'package:founderslink/ui/authentication/models/universities_model.dart';
-
+import "package:flutter_session/flutter_session.dart";
 import 'authentication_respository.dart';
 
 class AuthenticationRepositoryImpl extends AuthenticationRepository {
@@ -23,8 +23,9 @@ class AuthenticationRepositoryImpl extends AuthenticationRepository {
   AuthenticationRepositoryImpl(
       this.authenticationRemote, this._sharedPreference);
 
-  Future<String> getToken() {
-    return _sharedPreference.getString(Constant.TOKEN_KEY, '');
+  Future<String> getToken() async{
+    LoginResponse response = LoginResponse.fromJson(await FlutterSession().get(Constant.USER_INFO));
+    return response.data.token;//_sharedPreference.getString(Constant.TOKEN_KEY, '');
   }
 
   @override
@@ -65,19 +66,35 @@ class AuthenticationRepositoryImpl extends AuthenticationRepository {
     return authenticationRemote.getPlaceDetailFromId(place_id);
   }
 
+  @override
+  Future<void> logout() async{
+    await _sharedPreference.delete(Constant.USER_INFO);
+    await _sharedPreference.delete(Constant.USER_ID);
+    await _sharedPreference.delete(Constant.EMAIL_KEY);
+    await _sharedPreference.delete(Constant.LAST_NAME_KEY);
+    await _sharedPreference.delete(Constant.FIRST_NAME_KEY);
+    await _sharedPreference.delete(Constant.TOKEN_KEY);
+  }
   saveLoggedInUser(Either<Failure, LoginResponse> value) async {
     LoginResponse response;
     if (value.isRight()) {
       print('save user');
 
       value.fold((l) => null, (r) => response = r);
-      await _sharedPreference.set(Constant.EMAIL_KEY, response.data.email);
-      await _sharedPreference.set(Constant.TOKEN_KEY, response.data.token);
-      await _sharedPreference.set(
-          Constant.FIRST_NAME_KEY, response.data.firstName);
-      await _sharedPreference.set(
-          Constant.LAST_NAME_KEY, response.data.lastName);
-      await _sharedPreference.set(Constant.USER_ID, response.data.id);
+
+      await FlutterSession().set(Constant.USER_INFO, response);
+      // await FlutterSession().set(Constant.TOKEN_KEY, response.data.token);
+      //
+      // await FlutterSession().set(Constant.EMAIL_KEY, response.data.email);
+      // await FlutterSession().set(Constant.FIRST_NAME_KEY, response.data.firstName);
+      // await FlutterSession().set(Constant.LAST_NAME_KEY, response.data.lastName);
+      // await FlutterSession().set(Constant.USER_ID, response.data.id);
+
+      // await _sharedPreference.set(Constant.EMAIL_KEY, response.data.email);
+      // await _sharedPreference.set(Constant.TOKEN_KEY, response.data.token);
+      // await _sharedPreference.set(Constant.FIRST_NAME_KEY, response.data.firstName);
+      // await _sharedPreference.set(Constant.LAST_NAME_KEY, response.data.lastName);
+      // await _sharedPreference.set(Constant.USER_ID, response.data.id);
     }
   }
 
@@ -199,4 +216,5 @@ return authenticationRemote.UploadProfilePhoto(file,token:token);
     var token = await getToken();
    return authenticationRemote.setPronoun(pronoun_id: pronoun_id, token:token);
   }
+
 }

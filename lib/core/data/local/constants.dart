@@ -27,7 +27,7 @@ class Constant {
   static const String ROLE = "pos_role";
   static const String PRONOUN_ID = "pronoun_id";
   static const String TYPE = "type";
-
+  static const String USER_INFO = "login_info";
 
   static const String STAGING_BASE_URL = 'http://3.12.55.41/api/';
 }

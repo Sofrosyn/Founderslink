@@ -93,7 +93,7 @@ class _LoginStudent2State extends State<LoginStudent2> {
               },
               child: Column(
                 children: [
-                  _logo(),
+                  AppImages.logoWidget,
                   _nicheText(),
                   Padding(child:chipList(),
                   padding:EdgeInsets.symmetric(horizontal: 10.0)),

@@ -14,7 +14,7 @@ class JoinButton extends StatelessWidget {
     this.child,
     this.color = const Color(0xff2CC09C),
     this.textColor = Colors.white,
-    this.padding = const EdgeInsets.symmetric(vertical: 10, horizontal: 80),
+    this.padding = const EdgeInsets.symmetric(vertical: 10, horizontal: 30),
     this.radius = 5,
   }) : super(key: key);
 

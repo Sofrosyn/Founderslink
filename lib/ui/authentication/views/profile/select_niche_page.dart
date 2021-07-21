@@ -106,7 +106,7 @@ class _SelectNichePageState extends State<SelectNichePage> {
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    _logo(),
+                    AppImages.logoWidget,
                     _userText(),
                     _userType(),
                     _nicheText(),
@@ -592,7 +592,7 @@ class _SelectNichePageState extends State<SelectNichePage> {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (_) => LoginStudent2(course: selectedCourse,
                           location: selectedLocation,niches: indexOfSelectedItems.map((e) => e.id).toList(),
-                          school: selectedUniversity.name,)));
+                          school: selectedUniversity.name?? "Cambridge University",)));
                 }
                 break;
 
