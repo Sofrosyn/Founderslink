@@ -25,7 +25,7 @@ class _ConfirmationState extends State<Confirmation> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  _logo(),
+                  AppImages.logoWidget,
                   _text(),
                   _continueBtn(),
                 ],

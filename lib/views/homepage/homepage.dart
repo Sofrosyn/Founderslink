@@ -4,8 +4,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:founderslink/HelperClass/dart/heplerclass.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:founderslink/views/profile/profile_settings.dart';
-import 'package:founderslink/views/profile/profile_student/profile_student.dart';
+import 'package:founderslink/ui/profile/presentation/profile_settings.dart';
+import 'package:founderslink/ui/profile/presentation/profile_student.dart';
 
 class Homepage extends StatefulWidget {
   static String route = "/homepage";

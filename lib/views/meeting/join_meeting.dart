@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:founderslink/HelperClass/dart/heplerclass.dart';
-import 'package:founderslink/views/profile/set_profile.dart';
+import 'package:founderslink/ui/profile/presentation/set_profile.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker_widget/enum/image_picker_widget_shape.dart';
@@ -32,7 +32,7 @@ class _JoinMeetingState extends State<JoinMeeting> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  _logo(),
+                  AppImages.logoWidget,
                   _profile(),
                   _text(),
                   _pronouns(),

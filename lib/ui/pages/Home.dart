@@ -410,7 +410,7 @@ class _HomeState extends State<Home> {
                     child: Row(
                       children: [
                         Container(
-                          width: 190,
+                          width: 180,
                           padding: EdgeInsets.only(
                               left: 3, right: 3, top: 5, bottom: 5),
                           decoration: BoxDecoration(

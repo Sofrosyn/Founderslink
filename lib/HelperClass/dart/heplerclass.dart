@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 class AppImages {
   static const logo = 'images/logo.png';
   static const graduate = 'images/graduated.png';
@@ -28,6 +28,12 @@ class AppImages {
   static const bg_member = 'images/bg_member.jpg';
   static const bg_student = 'images/bg_student.jpg';
   static const bg = 'images/bg.png';
+
+  static Widget logoWidget = SizedBox(
+    width: 100.w,
+    height: 100.h,
+    child: Image.asset('assets/images/logo.jpg'),
+  );
 }
 
 class AppColor {
@@ -194,8 +200,8 @@ List<String> pronounsList = [
     "Ze/zi",
   ];
 
-  
-  Widget buildChip(String label,  {img, color}) {
+
+  Widget buildChip(String label,  {img, color, bool isSelected=false}) {
     return Chip(
       // labelPadding: EdgeInsets.all(2.0),
       avatar: img==null?null: Image.asset(
@@ -209,7 +215,7 @@ List<String> pronounsList = [
           color: Colors.black,
         ),
       ),
-      backgroundColor:color?? Colors.grey[200],
+      backgroundColor: isSelected ? Colors.blue : Colors.grey[200],
       elevation: 1.0,
       shadowColor: Colors.grey[60],
       // padding: EdgeInsets.fromLTRB(10, 0, 10,  0),

@@ -91,7 +91,7 @@ class _CompanyDetailsPageState extends State<CompanyDetailsPage> {
                 },
                 child: Column(
                   children: [
-                    _logo(),
+                    AppImages.logoWidget,
                     _companyname(),
                     _title(),
                     _nicheText(),

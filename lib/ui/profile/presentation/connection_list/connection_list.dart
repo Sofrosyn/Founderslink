@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:founderslink/HelperClass/dart/heplerclass.dart';
-import 'package:founderslink/views/profile/profile_edit.dart';
+import 'package:founderslink/ui/profile/presentation/profile_edit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ConnectionList extends StatefulWidget {

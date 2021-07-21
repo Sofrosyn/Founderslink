@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_session/flutter_session.dart';
+import 'package:founderslink/core/data/local/constants.dart';
 import 'package:founderslink/core/di/injector.dart';
+import 'package:founderslink/ui/authentication/models/login_model.dart';
 import 'package:founderslink/ui/authentication/views/login/login.dart';
+import 'package:founderslink/ui/controller/user_data_provider.dart';
+import 'package:founderslink/ui/pages/chat.dart';
+import 'package:get/get.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 void main() async{
@@ -39,8 +45,43 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+var isLoggedIn = false;
+var hasCompletedProfileSetup= false;
+
+
+@override
+  void initState(){
+  super.initState();
+  checkLoggedInStatus();
+}
+final requestController = Get.put(UserDataController());
+
+  Future<void> checkLoggedInStatus()async {
+
+    LoginResponse response = LoginResponse.fromJson(await FlutterSession().get(Constant.USER_INFO));
+    print("info ${response.data.email}");
+    if(response?.data?.type !=null){
+      isLoggedIn = true;
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>Chat()));
+    }else {
+      isLoggedIn = false;
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>Login()));
+    }
+  }
+
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Login());
+    return SafeArea(
+      child: Scaffold(
+          body: isLoggedIn ? Chat():Login()),
+    );
   }
+
+
+  //FutureBuilder(
+//               future: checkLoggedInStatus(),
+//               builder: (context, snapshot) {
+//                 return Text("Welcome");
+//               })
 }

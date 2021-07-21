@@ -26,7 +26,7 @@ class _LoginFounderState extends State<LoginFounder> {
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  _logo(),
+                  AppImages.logoWidget,
                   _userText(),
                   _userType(),
                   _nicheText(),

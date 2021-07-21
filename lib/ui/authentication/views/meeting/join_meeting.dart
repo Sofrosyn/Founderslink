@@ -32,7 +32,7 @@ class _JoinMeetingState extends State<JoinMeeting> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  _logo(),
+                  AppImages.logoWidget,
                   _profile(),
                   _text(),
                   _pronouns(),

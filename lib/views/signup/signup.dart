@@ -22,7 +22,7 @@ class _SignupState extends State<Signup> {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                _logo(),
+                AppImages.logoWidget,
                 _fname(),
                 _lastname(),
                 _workemail(),

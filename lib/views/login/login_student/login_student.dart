@@ -25,7 +25,7 @@ class _LoginStudentState extends State<LoginStudent> {
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  _logo(), _text(), _userType(),   _nicheText(), _chipList(), _fieldSchool(),_fieldSubject(),_fieldLocated(), _loginbtn()
+                  AppImages.logoWidget, _text(), _userType(),   _nicheText(), _chipList(), _fieldSchool(),_fieldSubject(),_fieldLocated(), _loginbtn()
                 ],
               ),
             ),

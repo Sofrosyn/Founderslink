@@ -23,7 +23,7 @@ class _LoginState extends State<Login> {
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  _logo(),
+                  AppImages.logoWidget,
                   _text(),
                   _email(),
                   _password(),

@@ -1,7 +1,7 @@
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
 import 'package:founderslink/HelperClass/dart/heplerclass.dart';
-import 'package:founderslink/views/profile/set_profile.dart';
+import 'package:founderslink/ui/profile/presentation/set_profile.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

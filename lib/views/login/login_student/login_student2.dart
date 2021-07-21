@@ -25,7 +25,7 @@ class _LoginStudent2State extends State<LoginStudent2> {
             padding: const EdgeInsets.symmetric(vertical: 30.0),
             child: Column(
               children: [
-                _logo(),
+                AppImages.logoWidget,
                
                 _nicheText(),
                 chipList(),

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:founderslink/utils/mixins/validation.dart';
 import 'package:founderslink/utils/ui/founderlinklayout.dart';
-import 'package:founderslink/ui/auth/checkEmail.dart';
+import 'package:founderslink/ui/mics/checkEmail.dart';
 import 'package:founderslink/widgets/Button.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;

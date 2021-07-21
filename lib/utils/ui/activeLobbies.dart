@@ -59,55 +59,56 @@ class _ActiveLobbiesState extends State<ActiveLobbies> {
                   margin: EdgeInsets.only(left: 10),
                   child: Image.asset("assets/images/BG.png"),
                 ),
-                Row(
-                  // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      margin: EdgeInsets.only(right: 25),
-                      child: Row(
-                        children: [
-                          Container(
-                            margin: EdgeInsets.only(left: 10),
-                            child: Image.asset("assets/images/girl1.png"),
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(left: 5),
-                            child: Image.asset("assets/images/girl2.png"),
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(left: 5),
-                            child: Image.asset("assets/images/boy1.png"),
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(left: 5),
-                            child: Image.asset("assets/images/boy2.png"),
-                          )
-                        ],
+                Expanded(
+                  child: Row(
+                    // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(right: 13),
+                        child: Row(
+                          children: [
+                            Container(
+                              margin: EdgeInsets.only(left: 10),
+                              child: Image.asset("assets/images/girl1.png"),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(left: 5),
+                              child: Image.asset("assets/images/girl2.png"),
+                            ),
+                            Container(
+                              margin: EdgeInsets.all( 5),
+                              child: Image.asset("assets/images/boy1.png"),
+                            ),
+                            Container(
+                              margin: EdgeInsets.all( 5),
+                              child: Image.asset("assets/images/boy2.png"),
+                            )
+                          ],
+                        ),
                       ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(right: 10, left: 25),
-                      child: JoinButton(
-                          child: Text(
-                            "Join",
-                            style: GoogleFonts.poppins(
-                                fontSize: 13,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white),
-                          ),
-                          onPressed: () async {
-                            await _handleMicPermission();
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => ChatLobby(
-                                          channel: _channel,
-                                          userName: _userName,
-                                          role: _role,
-                                        )));
-                          }),
-                    )
-                  ],
+                      Container(
+                        child: JoinButton(
+                            child: Text(
+                              "Join",
+                              style: GoogleFonts.poppins(
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
+                            ),
+                            onPressed: () async {
+                              await _handleMicPermission();
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => ChatLobby(
+                                            channel: _channel,
+                                            userName: _userName,
+                                            role: _role,
+                                          )));
+                            }),
+                      )
+                    ],
+                  ),
                 ),
               ],
             ),
@@ -167,7 +168,7 @@ class _ActiveLobbiesState extends State<ActiveLobbies> {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(right: 10, left: 25),
+
                       child: JoinButton(
                         child: Text(
                           "Join",

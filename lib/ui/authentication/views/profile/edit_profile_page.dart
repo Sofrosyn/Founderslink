@@ -86,7 +86,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  _logo(),
+                  AppImages.logoWidget,
                   _profile(),
                   _text(),
                   _pronouns(),

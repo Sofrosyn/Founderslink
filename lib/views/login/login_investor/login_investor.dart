@@ -27,7 +27,7 @@ class _LoginInvestorState extends State<LoginInvestor> {
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  _logo(),
+                  AppImages.logoWidget,
                   _userText(),
                   _userType(),
                   _nicheText(),
