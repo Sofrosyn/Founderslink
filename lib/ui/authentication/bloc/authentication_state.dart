@@ -19,6 +19,12 @@ class AuthenticationError extends AuthenticationState {
   AuthenticationError({this.message});
 }
 
+
+
+
+class FetchingUniversitiesState extends AuthenticationState {}
+
+
 class LoginSuccess extends AuthenticationState {
   final Either<Failure, LoginResponse> loginObject;
 

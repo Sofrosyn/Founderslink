@@ -5,14 +5,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:founderslink/core/ui/widgets/progress_dialog.dart';
 import 'package:founderslink/core/ui/widgets/toast.dart';
 import 'package:founderslink/ui/authentication/bloc/authentication_bloc.dart';
-import 'package:founderslink/ui/authentication/views/profile/select_niche_page.dart';
-import 'package:founderslink/ui/authentication/views/signup/confirmation.dart';
+import 'package:founderslink/ui/authentication/provider/login_provider_validation.dart';
 import 'package:founderslink/ui/authentication/views/signup/signup.dart';
 import 'package:founderslink/ui/controller/user_data_provider.dart';
 import 'package:founderslink/ui/pages/chat.dart';
-import 'package:founderslink/utils/extensions.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 import '../../heplerclass.dart';
 
@@ -40,11 +39,13 @@ class _LoginState extends State<Login> {
 
   @override
   void dispose() {
+    super.dispose();
     _bloc.close();
   }
 
   @override
   Widget build(BuildContext context) {
+    final _formProvider = Provider.of<LoginFormProvider>(context);
     return SafeArea(
         bottom: false,
         top: false,
@@ -65,10 +66,10 @@ class _LoginState extends State<Login> {
               if (state is LoginSuccess) {
                 Navigator.pop(context);
                 userController.getLoginPayload();
-
-              //  Get.to(() => Confirmation());
+                //  Get.to(() => Confirmation());
                 //Get.to(() => Chat());//Get.to(() => Confirmation());
-               userController.loginPayload.value.data.type!=null ? Get.to(() => Chat()):Get.to(() => Confirmation());
+                // userController.loginPayload.value.data.type!=null ?
+                Get.to(() => Chat()); //:Get.to(() => Confirmation());
               }
             },
             child: Center(
@@ -126,28 +127,55 @@ class _LoginState extends State<Login> {
                   fontWeight: FontWeight.bold, fontSize: 12.h),
             ),
           ),
-          Container(height: 40.h,
-
-            margin: EdgeInsets.only(
-              top: 5.h,
-              left: 20.h,
-              right: 20.h,
-            ),
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(5.h)),
-                border: Border.all(color: Colors.grey[400])),
-            child: Container(
-              margin: EdgeInsets.all(5.h),
-              child: TextField(
+          Container(
+            margin: EdgeInsets.symmetric(horizontal:20.w, vertical:5.h),
+            //height: 40.h,
+            // margin: EdgeInsets.only(
+            //   top: 5.h,
+            //   left: 20.h,
+            //   right: 20.h,
+            // ),
+            // decoration: BoxDecoration(
+            //     borderRadius: BorderRadius.all(Radius.circular(5.h)),
+            //     border: Border.all(color: Colors.grey[400])),
+            child: Consumer<LoginFormProvider>(
+              builder: (context, provider, child) => TextFormField(
                 onChanged: (value) {
                   _emailText = value;
-                  setState(() {});
+                  provider.validateEmail(value);
                 },
+    keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
+                    contentPadding:EdgeInsets.all(10),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(5)),
+                      borderSide: BorderSide(width: 1,color: Colors.grey[400]),
+                    ),
+                    disabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(5)),
+                      borderSide: BorderSide(width: 1,color: Colors.grey[400]),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(5)),
+                      borderSide: BorderSide(width: 1,color: Colors.grey[400]),
+                    ),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(5)),
+                        borderSide: BorderSide(width: 1,color:Colors.grey[400])
+                    ),
+                    focusedErrorBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(5)),
+                        borderSide: BorderSide(width: 1,color: Colors.grey[400])
+                    ),
+                    errorBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(5)),
+                        borderSide: BorderSide(width: 1,color: Colors.red)
+                    ),
+                    errorText:provider.email.error,
                     hintText: "johnadeo@gmail.com",
                     fillColor: Colors.white,
                     hintStyle: TextStyle(color: Colors.grey[200]),
-                    border: InputBorder.none),
+                    ),
               ),
             ),
           ),
@@ -175,31 +203,60 @@ class _LoginState extends State<Login> {
             ),
           ),
           Container(
-            height: 40.h,
-            margin:
-                EdgeInsets.only(top: 5.h, left: 20.h, right: 20.h, bottom: 2.h),
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(5.h)),
-                border: Border.all(color: Colors.grey[400])),
-            child: Container(
-              margin: EdgeInsets.all(5.h),
-              child: TextField(
-
+            margin: EdgeInsets.symmetric(horizontal:20.w, vertical:5.h),
+            // height: 40.h,
+            // margin:
+            //     EdgeInsets.only(top: 5.h, left: 20.h, right: 20.h, bottom: 2.h),
+            // decoration: BoxDecoration(
+            //     borderRadius: BorderRadius.all(Radius.circular(5.h)),
+            //     border: Border.all(color: Colors.grey[400])),
+            child: Consumer<LoginFormProvider>(
+              builder: (context, provider, child) => TextFormField(
+                autovalidateMode: AutovalidateMode.onUserInteraction,
                 obscureText: _obscureText,
                 onChanged: (value) {
                   _passwordText = value;
-                  setState(() {});
+                  provider.validatePassword(value);
                 },
+                keyboardType: TextInputType.visiblePassword,
                 decoration: InputDecoration(
+                    contentPadding:EdgeInsets.all(10),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(5)),
+                      borderSide: BorderSide(width: 1,color: Colors.grey[400]),
+                    ),
+                    disabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(5)),
+                      borderSide: BorderSide(width: 1,color: Colors.grey[400]),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(5)),
+                      borderSide: BorderSide(width: 1,color: Colors.grey[400]),
+                    ),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(5)),
+                        borderSide: BorderSide(width: 1,color:Colors.grey[400])
+                    ),
+                    focusedErrorBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(5)),
+                        borderSide: BorderSide(width: 1,color: Colors.grey[400])
+                    ),
+                    errorBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(5)),
+                        borderSide: BorderSide(width: 1,color: Colors.red)
+                    ),
+                    errorText: provider.password.error,
                     suffixIcon: InkWell(
                         onTap: () {
                           _toggleLogin();
                         },
-                        child: _obscureText? Icon(Icons.remove_red_eye): Icon(Icons.remove_red_eye_outlined)),
+                        child: _obscureText
+                            ? Icon(Icons.remove_red_eye)
+                            : Icon(Icons.remove_red_eye_outlined)),
                     hintText: "**********",
                     fillColor: Colors.white,
                     hintStyle: TextStyle(color: Colors.grey[200]),
-                    border: InputBorder.none),
+                    ),
               ),
             ),
           ),
@@ -209,31 +266,30 @@ class _LoginState extends State<Login> {
   }
 
   Widget _loginbtn() {
-    return GestureDetector(
-      onTap: ( ){
-        if(_emailText.isEmpty|| !_emailText.isValidEmail){
-          flutterToast('Please enter a valid Email', true);
-        }else if(_passwordText.isEmpty|| _passwordText.length<5){
-          flutterToast('Please enter a valid Passwordd', true);
-        }
-        else{
-          _bloc.add(LoginEvent(email: _emailText, password: _passwordText));
-        }
-
-            },
-      child: Container(
-        margin: EdgeInsets.only(top: 30.h, left: 20.w, right: 20.w),
-        width: double.infinity,
-        height: 50.h,
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(10.h)),
-            color: Colors.black),
-        child: Center(
-            child: Text(
-          "Login",
-          style: GoogleFonts.poppins(
-              fontSize: 12.h, color: Colors.white, fontWeight: FontWeight.bold),
-        )),
+    return Consumer<LoginFormProvider>(
+      builder: (context, provider, child) => GestureDetector(
+        onTap: (provider.validate)
+            ? () {
+                _bloc.add(
+                    LoginEvent(email: _emailText, password: _passwordText));
+              }
+            : null,
+        child: Container(
+          margin: EdgeInsets.only(top: 30.h, left: 20.w, right: 20.w),
+          width: double.infinity,
+          height: 50.h,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.all(Radius.circular(10.h)),
+              color: Colors.black),
+          child: Center(
+              child: Text(
+            "Login",
+            style: GoogleFonts.poppins(
+                fontSize: 12.h,
+                color: Colors.white,
+                fontWeight: FontWeight.bold),
+          )),
+        ),
       ),
     );
   }

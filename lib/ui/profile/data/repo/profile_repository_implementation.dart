@@ -18,10 +18,12 @@ class ProfileRepositoryImpl extends ProfileRepository {
   ProfileRepositoryImpl(this.profileRemote, this._sharedPreference);
 
   Future<String> getToken() async {
-    LoginResponse response =
-        LoginResponse.fromJson(await FlutterSession().get(Constant.USER_INFO));
-    return response
-        .data.token; //_sharedPreference.getString(Constant.TOKEN_KEY, '');
+    // LoginResponse response =
+    //     LoginResponse.fromJson(await FlutterSession().get(Constant.USER_INFO));
+    // return response
+    //     .data.token;
+    var token = await _sharedPreference.getString(Constant.TOKEN_KEY, '');
+    return token;
   }
 
   saveLoggedInUser(Either<Failure, LoginResponse> value) async {
