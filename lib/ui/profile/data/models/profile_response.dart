@@ -1,3 +1,7 @@
+import 'package:founderslink/ui/profile/data/models/niches_response.dart';
+
+import 'interest_response.dart';
+
 class ProfileResponse {
   Data data;
 
@@ -31,6 +35,7 @@ class Data {
   Investor investor;
   TeamMember teamMember;
   Student student;
+  bool hasCompletedProfile;
   List<Interests> interests;
   List<Niches> niches;
   List<Industries> industries;
@@ -46,6 +51,7 @@ class Data {
         this.avatarUrl,
         this.createdAt,
         this.investor,
+        this.hasCompletedProfile,
         this.updatedAt,
         this.founder,
         this.teamMember,
@@ -59,6 +65,7 @@ class Data {
     firstName = json['first_name'];
     lastName = json['last_name'];
     email = json['email'];
+    hasCompletedProfile= json['has_completed_profile'];
     type = json['type'];
     pronounId = json['pronoun_id'];
     investor = json['investor'] != null
@@ -104,6 +111,7 @@ class Data {
     data['email'] = this.email;
     data['type'] = this.type;
     data['pronoun_id'] = this.pronounId;
+    data['has_completed_profile']=this.hasCompletedProfile;
     if (this.pronoun != null) {
       data['pronoun'] = this.pronoun.toJson();
     }
@@ -326,46 +334,46 @@ class Industries {
   }
 }
 
-class Interests {
-  int id;
-  String name;
+// class Interests {
+//   int id;
+//   String name;
+//
+//   Interests({this.id, this.name});
+//
+//   Interests.fromJson(Map<String, dynamic> json) {
+//     id = json['id'];
+//     name = json['name'];
+//   }
+//
+//   Map<String, dynamic> toJson() {
+//     final Map<String, dynamic> data = new Map<String, dynamic>();
+//     data['id'] = this.id;
+//     data['name'] = this.name;
+//     return data;
+//   }
+// }
 
-  Interests({this.id, this.name});
-
-  Interests.fromJson(Map<String, dynamic> json) {
-    id = json['id'];
-    name = json['name'];
-  }
-
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['name'] = this.name;
-    return data;
-  }
-}
-
-class Niches {
-  int id;
-  String name;
-  Null emoji;
-
-  Niches({this.id, this.name, this.emoji});
-
-  Niches.fromJson(Map<String, dynamic> json) {
-    id = json['id'];
-    name = json['name'];
-    emoji = json['emoji'];
-  }
-
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['name'] = this.name;
-    data['emoji'] = this.emoji;
-    return data;
-  }
-}
+// class Niches {
+//   int id;
+//   String name;
+//   Null emoji;
+//
+//   Niches({this.id, this.name, this.emoji});
+//
+//   Niches.fromJson(Map<String, dynamic> json) {
+//     id = json['id'];
+//     name = json['name'];
+//     emoji = json['emoji'];
+//   }
+//
+//   Map<String, dynamic> toJson() {
+//     final Map<String, dynamic> data = new Map<String, dynamic>();
+//     data['id'] = this.id;
+//     data['name'] = this.name;
+//     data['emoji'] = this.emoji;
+//     return data;
+//   }
+// }
 
 
 

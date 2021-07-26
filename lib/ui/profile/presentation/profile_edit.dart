@@ -62,10 +62,10 @@ class _EditUserProfileState extends State<EditUserProfile> {
   @override
   void initState() {
     super.initState();
-    userNiches.addAll(_userDataController.loginPayload.value.data.niches);
+    userNiches.addAll(_userDataController.userPayload.value.data.niches);
 
     print("${userNiches[0].name} ${userNiches[1].name}  ${userNiches[2].name}");
-    userInterests.addAll(_userDataController.loginPayload.value.data.interests);
+    userInterests.addAll(_userDataController.userPayload.value.data.interests);
     print(userInterests.length);
     print("${userInterests[0].name} ${userInterests[1].name}  ${userInterests[2].name}");
     _bloc.add(GetNichesAndInterestEvent());
@@ -121,7 +121,7 @@ class _EditUserProfileState extends State<EditUserProfile> {
                 Navigator.pop(context);
                 setNicheAndInterestFromAPi(interestResponse: state.interests.getOrElse(() => null),
                 nicheResponse: state.niches.getOrElse(() => null),
-                    type: _userDataController.loginPayload.value.data.type);
+                    type: _userDataController.userPayload.value.data.type);
                 setState(() {
 
                 });
@@ -210,7 +210,7 @@ class _EditUserProfileState extends State<EditUserProfile> {
     return ImagePickerWidget(
 
       diameter: 100.r,
-      initialImage: _userDataController.loginPayload.value.data.avatarUrl?? defaultAvatar,
+      initialImage: _userDataController.userPayload.value.data.avatarUrl?? defaultAvatar,
       shape: ImagePickerWidgetShape.circle,
       isEditable: true,
       onChange: (File file) {
