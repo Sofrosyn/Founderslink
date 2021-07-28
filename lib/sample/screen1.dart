@@ -26,7 +26,8 @@ class _Screen1State extends State<Screen1> {
               Colors.grey,
               Colors.blueGrey,
             ],
-          )),
+          ),
+          ),
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -52,7 +53,7 @@ class _Screen1State extends State<Screen1> {
                           ),
                         ),
                         Icon(
-                          Icons.ac_unit_sharp,
+                          Icons.notifications_none_outlined,
                         ),
                       ],
                     ),

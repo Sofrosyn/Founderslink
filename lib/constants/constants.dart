@@ -3,8 +3,13 @@ import 'package:flutter/material.dart';
 
 class AppColors {
   static Color KappBackgroundColor = Color(0xFFFFFFFF);
-  // Success Screen Colors
-  static Color KsuccesSCTextColor = Color(0xff4F89A9);
+
+
+  //Gradient AppBar Color
+  static Color KappGradientColorOne = Colors.grey[300];
+  static Color KappGradientColorTwo = Colors.white;
+
+
 
   // Common Colors
 

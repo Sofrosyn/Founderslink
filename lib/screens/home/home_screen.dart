@@ -14,7 +14,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
         resizeToAvoidBottomInset: false,
         body: HomeBody(),
-        backgroundColor: AppColors.KappBackgroundColor
+        // backgroundColor: AppColors.KappBackgroundColor
     );
   }
 }
