@@ -47,6 +47,9 @@ class _SelectNichePageState extends State<SelectNichePage> {
   Universities selectedUniversity = Universities();
   String selectedCourse = '';
 
+
+  final GlobalKey<ScaffoldState> _scaffoldKey =  GlobalKey<ScaffoldState>();
+
   @override
   void initState() {
     super.initState();
@@ -66,6 +69,7 @@ class _SelectNichePageState extends State<SelectNichePage> {
         bottom: false,
         top: false,
         child: Scaffold(
+          key: _scaffoldKey,
           backgroundColor: Colors.white,
           body: Padding(
             padding: const EdgeInsets.symmetric(vertical: 30.0),
@@ -75,6 +79,21 @@ class _SelectNichePageState extends State<SelectNichePage> {
                 if (state is Loading) {
                   return progressDialog(context);
                 }
+
+                if(state is FetchingUniversitiesState){
+                  _scaffoldKey.currentState.showSnackBar(
+                     SnackBar(
+                      duration:  Duration(seconds: 4),
+                      content: Row(
+                        children: <Widget>[
+                           CircularProgressIndicator(),
+                           Text("  Fetching Universities...")
+                        ],
+                      ),
+                    ),
+                  );
+                }
+
 
                 if (state is AuthenticationError) {
                   Navigator.pop(context);

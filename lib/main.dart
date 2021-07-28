@@ -4,16 +4,26 @@ import 'package:flutter_session/flutter_session.dart';
 import 'package:founderslink/core/data/local/constants.dart';
 import 'package:founderslink/core/di/injector.dart';
 import 'package:founderslink/ui/authentication/models/login_model.dart';
+import 'package:founderslink/ui/authentication/provider/login_provider_validation.dart';
+import 'package:founderslink/ui/authentication/provider/registration_provider_validation.dart';
 import 'package:founderslink/ui/authentication/views/login/login.dart';
 import 'package:founderslink/ui/controller/user_data_provider.dart';
 import 'package:founderslink/ui/pages/chat.dart';
 import 'package:get/get.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:provider/provider.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
    configureDependencies();
-  runApp(MyApp());
+  runApp(
+      MultiProvider(providers: [
+        ChangeNotifierProvider<LoginFormProvider>(create: (_) => LoginFormProvider()),
+        ChangeNotifierProvider<SignUpFormProvider>(create: (_) => SignUpFormProvider()),
+      ],
+          child: MyApp())
+
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -57,10 +67,9 @@ var hasCompletedProfileSetup= false;
 final requestController = Get.put(UserDataController());
 
   Future<void> checkLoggedInStatus()async {
-
-    LoginResponse response = LoginResponse.fromJson(await FlutterSession().get(Constant.USER_INFO));
-    print("info ${response.data.email}");
-    if(response?.data?.type !=null){
+    var token = await FlutterSession().get(Constant.USER_INFO);
+    print("user token: ${token}");
+    if(token !=null){
       isLoggedIn = true;
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>Chat()));
     }else {

@@ -24,8 +24,10 @@ class AuthenticationRepositoryImpl extends AuthenticationRepository {
       this.authenticationRemote, this._sharedPreference);
 
   Future<String> getToken() async{
-    LoginResponse response = LoginResponse.fromJson(await FlutterSession().get(Constant.USER_INFO));
-    return response.data.token;//_sharedPreference.getString(Constant.TOKEN_KEY, '');
+   // LoginResponse response = LoginResponse.fromJson(await FlutterSession().get(Constant.USER_INFO));
+   // return response.data.token;//
+    var token = await  _sharedPreference.getString(Constant.TOKEN_KEY, '');
+    return token;
   }
 
   @override
@@ -33,10 +35,6 @@ class AuthenticationRepositoryImpl extends AuthenticationRepository {
     return authenticationRemote
         .login(email: email, password: password)
         .then((value) => saveLoggedInUser(value));
-    // if(response.isRight()){
-    //   saveLoggedInUser(response);
-    // }
-    // return response;
   }
 
   @override
@@ -81,16 +79,11 @@ class AuthenticationRepositoryImpl extends AuthenticationRepository {
       print('save user');
 
       value.fold((l) => null, (r) => response = r);
-
-      await FlutterSession().set(Constant.USER_INFO, response);
-      // await FlutterSession().set(Constant.TOKEN_KEY, response.data.token);
-      //
-      // await FlutterSession().set(Constant.EMAIL_KEY, response.data.email);
-      // await FlutterSession().set(Constant.FIRST_NAME_KEY, response.data.firstName);
-      // await FlutterSession().set(Constant.LAST_NAME_KEY, response.data.lastName);
-      // await FlutterSession().set(Constant.USER_ID, response.data.id);
-
-      // await _sharedPreference.set(Constant.EMAIL_KEY, response.data.email);
+      await FlutterSession().set(Constant.TOKEN_KEY, response.data.token);
+      await FlutterSession().set(Constant.EMAIL_KEY, response.data.email);
+      await FlutterSession().set(Constant.USER_ID, response.data.id);
+      await FlutterSession().set(Constant.FIRST_NAME_KEY, response.data.firstName);
+      await FlutterSession().set(Constant.LAST_NAME_KEY, response.data.lastName);
       // await _sharedPreference.set(Constant.TOKEN_KEY, response.data.token);
       // await _sharedPreference.set(Constant.FIRST_NAME_KEY, response.data.firstName);
       // await _sharedPreference.set(Constant.LAST_NAME_KEY, response.data.lastName);

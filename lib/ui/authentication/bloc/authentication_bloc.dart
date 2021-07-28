@@ -122,6 +122,7 @@ class AuthenticationBloc
     }
 
     if (event is GetUniversitiesEvent) {
+      yield FetchingUniversitiesState();
       try {
         var _response = await authenticationRepository.getUniversities();
         yield HasUniversitiesState(response: _response);
@@ -133,6 +134,7 @@ class AuthenticationBloc
 
     if (event is UpdateFounderProfile) {
       yield Loading();
+      print("1");
       try {
         var _response = await authenticationRepository.updateFounderProfile(
             industries: event.industries,
@@ -143,6 +145,7 @@ class AuthenticationBloc
             years_of_experience: event.years_of_experience,
             title: event.title,
             company_name: event.company_name);
+        print("2");
         yield UpdateFounderProfileSuccess();
       } catch (error) {
         yield AuthenticationError(
@@ -184,6 +187,7 @@ class AuthenticationBloc
     if (event is UpdateStudentProfile) {
       try {
         yield Loading();
+        print("1");
         var _response = await authenticationRepository.updateStudentProfile(
           location: event.location,
           niches: event.niches,
@@ -193,6 +197,7 @@ class AuthenticationBloc
           entrepreneurial_experience: event.entrepreneurial_experience,
           course_of_study: event.course_of_study,
         );
+        print("1");
         yield UpdateStudentProfileSuccess();
       } catch (error) {
         yield AuthenticationError(

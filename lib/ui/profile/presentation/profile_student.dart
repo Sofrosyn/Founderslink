@@ -1,13 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:focused_menu/focused_menu.dart';
 import 'package:focused_menu/modals.dart';
 import 'package:founderslink/HelperClass/dart/heplerclass.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:founderslink/core/ui/widgets/progress_dialog.dart';
 import 'package:founderslink/core/ui/widgets/toast.dart';
+import 'package:founderslink/ui/authentication/views/profile/select_niche_page.dart';
+import 'package:founderslink/ui/controller/user_data_provider.dart';
 import 'package:founderslink/ui/profile/bloc/profile_bloc.dart';
+import 'package:founderslink/ui/profile/data/models/interest_response.dart';
+import 'package:founderslink/ui/profile/data/models/niches_response.dart';
 import 'package:founderslink/ui/profile/data/models/profile_response.dart';
 import 'package:founderslink/ui/profile/presentation/profile_edit.dart'
     hide defaultAvatar;
@@ -51,6 +55,8 @@ class _ProfileStudentState extends State<ProfileStudent> {
     super.initState();
     _bloc.add(GetUserProfileEvent());
   }
+
+  UserDataController _userDataController = Get.find<UserDataController>();
 
   @override
   Widget build(BuildContext context) {
@@ -100,6 +106,18 @@ class _ProfileStudentState extends State<ProfileStudent> {
                     state.response
                         .fold((l) => null, (r) => _profileResponse = r);
                     getApiValues(_profileResponse);
+                    _userDataController.userPayload.value = _profileResponse;
+                    _profileResponse?.data?.hasCompletedProfile != false
+                        ? null
+                        : showCupertinoAlertDialog(
+                            title: "Incomplete Profile",
+                            message: "Please Proceed to Complete Your Profile",
+                            context: context,
+                            actionText: "Complete Profile",
+                            callback: () {
+                              Get.to(() => SelectNichePage());
+                            },
+                          );
                     setState(() {});
                   }
 
@@ -250,7 +268,7 @@ class _ProfileStudentState extends State<ProfileStudent> {
                   style: GoogleFonts.poppins(
                       fontWeight: FontWeight.w600, fontSize: 12.h))),
           InkWell(
-            onTap: (){
+            onTap: () {
               Get.to(ConnectionList());
             },
             child: Container(
