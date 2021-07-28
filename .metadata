@@ -6,5 +6,7 @@
 version:
   revision: 8f89f6505b941329a864fef1527243a72800bf4d
   channel: unknown
+  revision: adc687823a831bbebe28bdccfac1a628ca621513
+  channel: stable
 
 project_type: app

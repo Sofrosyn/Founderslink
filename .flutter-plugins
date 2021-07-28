@@ -2,11 +2,15 @@
 agora_rtc_engine=C:\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\agora_rtc_engine-3.3.3\\
 agora_rtm=C:\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\agora_rtm-0.9.14\\
 flutter_boom_menu=C:\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\flutter_boom_menu-1.0.2\\
+flutter_plugin_android_lifecycle=C:\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\flutter_plugin_android_lifecycle-1.0.11\\
+fluttertoast=C:\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\fluttertoast-7.1.8\\
+image_picker=C:\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\image_picker-0.6.7+22\\
 integration_test=C:\\flutter\\packages\\integration_test\\
+open_file=C:\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\open_file-3.2.1\\
 path_provider=C:\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\path_provider-1.6.28\\
 path_provider_linux=C:\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\path_provider_linux-0.0.1+2\\
 path_provider_macos=C:\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\path_provider_macos-0.0.4+8\\
-path_provider_windows=C:\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\path_provider_windows-0.0.4+3\\
+path_provider_windows=C:\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\path_provider_windows-0.0.5\\
 permission_handler=C:\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\permission_handler-5.1.0+2\\
 shared_preferences=C:\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\shared_preferences-0.5.12+4\\
 shared_preferences_linux=C:\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\shared_preferences_linux-0.0.2+4\\
