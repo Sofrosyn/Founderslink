@@ -60,7 +60,7 @@ class HomeBody extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Image.asset(
-                              'assets/images/girl.jpeg',
+                              'assets/images/girl.png',
                               height: height * 0.07,
                               width: width * 0.2,
                             ),
@@ -177,7 +177,7 @@ class HomeBody extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Image.asset(
-                              'assets/images/man_image.jpeg',
+                              'assets/images/man_image.png',
                               height: height * 0.07,
                               width: width * 0.2,
                             ),

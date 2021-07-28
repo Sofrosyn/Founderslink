@@ -14,7 +14,7 @@ class MuteImage extends StatelessWidget {
             borderRadius: BorderRadius.circular(15),
           ),
           padding: EdgeInsets.all(2),
-          child: Image.asset('assets/images/girl_pic.jpeg')),
+          child: Image.asset('assets/images/girl.png')),
     );
   }
 }

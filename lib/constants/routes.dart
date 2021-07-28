@@ -10,9 +10,9 @@ import 'package:flutter/material.dart';
 
 final Map<String, WidgetBuilder> routes = {
   HomeScreen.routeName: (context) => HomeScreen(),
+  ChatLobbyScreen.routeName: (context) => ChatLobbyScreen(),
   CreateChannelScreen.routeName: (context) => CreateChannelScreen(),
   PublicLobbyScreen.routeName: (context) => PublicLobbyScreen(),
-  ChatLobbyScreen.routeName: (context) => ChatLobbyScreen(),
 
 
 

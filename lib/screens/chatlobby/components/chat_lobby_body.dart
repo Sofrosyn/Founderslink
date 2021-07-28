@@ -70,7 +70,7 @@ class ChatLobbyBody extends StatelessWidget {
                               border:
                               Border.all(color: Color(0xFF04FF1D), width: 5),
                             ),
-                            child: Image.asset('assets/images/girl.jpeg')),
+                            child: Image.asset('assets/images/girl.png')),
                         Text(
                           'James',
                           style: TextStyle(color: Colors.white),
@@ -84,7 +84,7 @@ class ChatLobbyBody extends StatelessWidget {
                       children: [
                         Stack(
                           children: [
-                            Image.asset('assets/images/man_image.jpeg'),
+                            Image.asset('assets/images/girl.png'),
                             MuteImage(),
                           ],
                         ),
@@ -101,7 +101,7 @@ class ChatLobbyBody extends StatelessWidget {
                       children: [
                         Stack(
                           children: [
-                            Image.asset('assets/images/man_image.jpeg'),
+                            Image.asset('assets/images/girl.png'),
                             MuteImage(),
                           ],
                         ),
@@ -118,7 +118,7 @@ class ChatLobbyBody extends StatelessWidget {
                       children: [
                         Stack(
                           children: [
-                      Image.asset('assets/images/man_image.jpeg'),
+                            Image.asset('assets/images/girl.png'),
                             MuteImage(),
                           ],
                         ),
@@ -135,7 +135,7 @@ class ChatLobbyBody extends StatelessWidget {
                       children: [
                         Stack(
                           children: [
-                            Image.asset('assets/images/man_image.jpeg'),
+                            Image.asset('assets/images/girl.png'),
                             MuteImage(),
                           ],
                         ),
@@ -152,7 +152,7 @@ class ChatLobbyBody extends StatelessWidget {
                       children: [
                         Stack(
                           children: [
-                            Image.asset('assets/images/man_image.jpeg'),
+                            Image.asset('assets/images/girl.png'),
                             MuteImage(),
                           ],
                         ),
@@ -187,7 +187,7 @@ class ChatLobbyBody extends StatelessWidget {
                           border:
                           Border.all(color: Color(0xFF04FF1D), width: 3),
                         ),
-                        child:  Image.asset('assets/images/man_image.jpeg'),),
+                        child:  Image.asset('assets/images/man_image.png'),),
                     Text(
                       'Alice',
                       style: TextStyle(color: Colors.white),
@@ -219,7 +219,7 @@ class ChatLobbyBody extends StatelessWidget {
                       Container(
                           height: 50,
                           width: 50,
-                          child:  Image.asset('assets/images/man_image.jpeg'),),
+                          child:  Image.asset('assets/images/man_image.png'),),
                       Text(
                         'James',
                         style: TextStyle(color: Colors.white),
@@ -270,7 +270,7 @@ class ChatLobbyBody extends StatelessWidget {
             Container(
                 height: 50,
                 width: 50,
-                child:  Image.asset('assets/images/man_image.jpeg'),),
+                child:  Image.asset('assets/images/man_image.png'),),
             Text(
               'James',
               style: TextStyle(color: Colors.white),
@@ -282,7 +282,7 @@ class ChatLobbyBody extends StatelessWidget {
             Container(
                 height: 50,
                 width: 50,
-                child:  Image.asset('assets/images/man_image.jpeg'),),
+                child:  Image.asset('assets/images/man_image.png'),),
             Text(
               'James',
               style: TextStyle(color: Colors.white),

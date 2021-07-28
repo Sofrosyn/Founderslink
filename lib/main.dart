@@ -1,6 +1,5 @@
 import 'package:floor/constants/routes.dart';
-import 'package:floor/sample/screen1.dart';
-import 'package:floor/sample/screen2.dart';
+
 import 'package:floor/sample/screen3.dart';
 import 'package:floor/screens/home/home_screen.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +23,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: routes,
-      // home: Screen1(),
+      // home: Screen3(),
       initialRoute: HomeScreen.routeName,
 
     );
