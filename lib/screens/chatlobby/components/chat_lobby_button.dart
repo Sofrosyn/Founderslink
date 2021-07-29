@@ -10,8 +10,11 @@ class ChatLobbyButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final height = MediaQuery.of(context).size.height;
+    final width = MediaQuery.of(context).size.width;
     return MaterialButton(
-      height: 30,
+      height: height * 0.04,
+      // minWidth:  width * 0.2,
       color: Color(btnClr),
       onPressed: () {},
       child: Text(text ,style: TextStyle(color: Colors.white,fontSize: 15),),

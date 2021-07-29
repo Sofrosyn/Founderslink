@@ -59,10 +59,14 @@ class HomeBody extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            Image.asset(
-                              'assets/images/girl.png',
-                              height: height * 0.07,
-                              width: width * 0.2,
+                            Padding(
+
+                                padding: const EdgeInsets.only(right: 7.0),
+                              child: Image.asset(
+                                'assets/images/girl.png',
+                                height: height * 0.07,
+                                width: width * 0.15,
+                              ),
                             ),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -97,9 +101,11 @@ class HomeBody extends StatelessWidget {
                                 ),
                               ],
                             ),
-                            SizedBox(width: width * 0.1),
+                            SizedBox(width: width * 0.07),
                             Container(
-                              padding: EdgeInsets.all(8.0),
+                              width: width * 0.12,
+                              height: height * 0.05,
+                              padding: EdgeInsets.all(5.0),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(8.0),
                                 color: Color(0xFFF1F1F1),
@@ -160,6 +166,7 @@ class HomeBody extends StatelessWidget {
                   ),
                 ),
               ),
+
               SizedBox(
                 height: height * 0.17,
                 width: width * 1,
@@ -176,10 +183,13 @@ class HomeBody extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            Image.asset(
-                              'assets/images/man_image.png',
-                              height: height * 0.07,
-                              width: width * 0.2,
+                            Padding(
+                              padding: const EdgeInsets.only(right: 7.0),
+                              child: Image.asset(
+                                'assets/images/man_image.png',
+                                height: height * 0.07,
+                                width: width * 0.15,
+                              ),
                             ),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -214,9 +224,11 @@ class HomeBody extends StatelessWidget {
                                 ),
                               ],
                             ),
-                            SizedBox(width: width * 0.1),
+                            SizedBox(width: width * 0.07),
                             Container(
-                              padding: EdgeInsets.all(8.0),
+                              width: width * 0.12,
+                              height: height * 0.05,
+                              padding: EdgeInsets.all(5.0),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(8.0),
                                 color: Color(0xFFF1F1F1),

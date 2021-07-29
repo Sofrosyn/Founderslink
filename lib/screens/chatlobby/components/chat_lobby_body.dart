@@ -1,6 +1,7 @@
 
 import 'package:floor/screens/chatlobby/components/chat_lobby_button.dart';
 import 'package:floor/screens/chatlobby/components/mute_image_chatlobby.dart';
+import 'package:floor/screens/createchannel/create_channel.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -84,7 +85,8 @@ class ChatLobbyBody extends StatelessWidget {
                       children: [
                         Stack(
                           children: [
-                            Image.asset('assets/images/girl.png'),
+                            Image.asset('assets/images/girl.png',
+                            ),
                             MuteImage(),
                           ],
                         ),
@@ -180,8 +182,8 @@ class ChatLobbyBody extends StatelessWidget {
                 child: Column(
                   children: [
                     Container(
-                        height: 50,
-                        width: 50,
+                      height: height * 0.07,
+                        width: width * 0.15,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(45),
                           border:
@@ -200,16 +202,16 @@ class ChatLobbyBody extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 55.0),
-                child: _floorRow(),
+                child: _floorRow(context),
               ),
               Padding(
                 padding:
-                const EdgeInsets.symmetric(horizontal: 10.0, vertical: 25),
-                child: _floorRow(),
+                const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
+                child: _floorRow(context),
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 55.0),
-                child: _floorRow(),
+                child: _floorRow(context),
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 55.0),
@@ -217,8 +219,8 @@ class ChatLobbyBody extends StatelessWidget {
                   child: Column(
                     children: [
                       Container(
-                          height: 50,
-                          width: 50,
+                          height: height * 0.05,
+                          width: width * 0.1,
                           child:  Image.asset('assets/images/man_image.png'),),
                       Text(
                         'James',
@@ -229,16 +231,18 @@ class ChatLobbyBody extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 25.0,
+                height: height * 0.01,
               ),
               Spacer(),
               Align(
                 alignment: Alignment.centerRight,
                 child: Container(
-                  height: 40,
-                  width: 40,
+                  height: height * 0.1,
+                  width: width * 0.1,
                   child: FloatingActionButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, CreateChannelScreen.routeName);
+                    },
                     child: Icon(
                       Icons.add,
                       size: 28,
@@ -261,15 +265,17 @@ class ChatLobbyBody extends StatelessWidget {
       ),
     );
   }
-  Widget _floorRow() {
+  Widget _floorRow(BuildContext context) {
+    final height = MediaQuery.of(context).size.height;
+    final width = MediaQuery.of(context).size.width;
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Column(
           children: [
             Container(
-                height: 50,
-                width: 50,
+                height: height * 0.055,
+                width: width * 0.11,
                 child:  Image.asset('assets/images/man_image.png'),),
             Text(
               'James',
@@ -280,9 +286,9 @@ class ChatLobbyBody extends StatelessWidget {
         Column(
           children: [
             Container(
-                height: 50,
-                width: 50,
-                child:  Image.asset('assets/images/man_image.png'),),
+              height: height * 0.055,
+              width: width * 0.11,
+              child:  Image.asset('assets/images/man_image.png'),),
             Text(
               'James',
               style: TextStyle(color: Colors.white),

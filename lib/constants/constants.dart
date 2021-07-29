@@ -21,6 +21,8 @@ class AppColors {
   static Color KwhiteColor = Colors.white;
   static Color KgreenColor = Colors.green;
   static Color KtransparentColor = Colors.transparent;
-  //Profile screen colors.
+
+  //CreateChannelScreen colors.
+  static Color KcreateChanalSCColor = Color(0xff9F9EE6);
 
 }
