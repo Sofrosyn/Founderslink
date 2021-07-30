@@ -1,5 +1,6 @@
 
 import 'package:floor/constants/constants.dart';
+import 'package:floor/screens/startchatpublic/strat_chat_public.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -31,24 +32,33 @@ class CreateChannelBody extends StatelessWidget {
                     SizedBox(
                       height: height * 0.015,
                     ),
-                    Container(
-                      width: width * 0.3,
-                      height: height * 0.1,
-                      decoration: BoxDecoration(
-                          color: AppColors.KgrayColor,
-                          // Set border width
-                          borderRadius: BorderRadius.all(
-                              Radius.circular(10.0)), // Set rounded corner radius
-                        // Make rounded corner of border
+                    InkWell(
+                      onTap: (){
+                        Navigator.pushNamed(context, StartChatPublicScreen.routeName);
+                      },
+                      child: Container(
+                        width: width * 0.3,
+                        height: height * 0.1,
+                        decoration: BoxDecoration(
+                            color: AppColors.KgrayColor,
+                            // Set border width
+                            borderRadius: BorderRadius.all(
+                                Radius.circular(10.0)), // Set rounded corner radius
+                          // Make rounded corner of border
 
-                      ),
-                      child: Column(
-                        children: [
-                          Icon(
-                            Icons.upload,
-                            size: 76,
-                          ),
-                        ],
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            SizedBox(
+                              height: height * 0.007,
+                            ),
+                            Icon(
+                              Icons.upload_rounded,
+                              size: 76,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     SizedBox(
@@ -295,7 +305,7 @@ class CreateChannelBody extends StatelessWidget {
                       backgroundColor: MaterialStateProperty.all(
                        AppColors.KcreateChanalSCColor,
                       ),
-                      fixedSize: MaterialStateProperty.all(Size(400, 40)),
+                      minimumSize: MaterialStateProperty.all(Size(400, 40)),
                       shape: MaterialStateProperty.all(
                         RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),

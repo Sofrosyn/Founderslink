@@ -1,6 +1,5 @@
 import 'package:floor/constants/constants.dart';
 import 'package:floor/screens/chatlobby/components/chat_lobby_body.dart';
-import 'package:floor/screens/publiclobby/components/public_lobby_body.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
