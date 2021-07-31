@@ -22,7 +22,12 @@ class ChatLobbyBody extends StatelessWidget {
               Container(
                 child: Row(
                   children: [
-                    Icon(Icons.arrow_back_ios),
+                    InkWell(
+                        onTap: (){
+                          Navigator.pop(context);
+                        },
+
+                        child: Icon(Icons.arrow_back_ios)),
                     SizedBox(
                       width: 120.0,
                     ),

@@ -1,4 +1,5 @@
 import 'package:floor/constants/constants.dart';
+import 'package:floor/screens/chatmenu/chat_menu.dart';
 import 'package:floor/screens/frameone/components/frame_one_body.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -28,10 +29,15 @@ class _FrameOneScreenState extends State<FrameOneScreen> {
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: AppColors.KwhiteColor,
-        leading: Icon(
-          Icons.arrow_back_ios,
-          color: Colors.black,
-          size: 23,
+        leading: InkWell(
+          onTap: (){
+            Navigator.pop(context);
+          },
+          child: Icon(
+            Icons.arrow_back_ios,
+            color: Colors.black,
+            size: 23,
+          ),
         ),
         title: Text(
           'Messages',
@@ -55,11 +61,14 @@ class _FrameOneScreenState extends State<FrameOneScreen> {
       ),
       body: FrameOneBody(),
       bottomNavigationBar: BottomAppBar(
-        elevation: 0,
+        // color: Colors.grey[300],
+        elevation: 30.0,
         shape: CircularNotchedRectangle(),
         child: Container(
-          decoration: BoxDecoration(),
-          height: 50,
+          decoration: BoxDecoration(
+            // color: Colors.white54
+          ),
+          height: height * 0.05,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -99,15 +108,16 @@ class _FrameOneScreenState extends State<FrameOneScreen> {
           ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.white,
-        child: Icon(
-          Icons.person,
-          color: Colors.black,
-        ),
-        onPressed: null,
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      // floatingActionButton: FloatingActionButton(
+      //   backgroundColor: Colors.white,
+      //   child: Icon(
+      //     Icons.person,
+      //     color: Colors.black,
+      //   ),
+      //   onPressed: (){
+      //   },
+      // ),
+      // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       // backgroundColor: AppColors.KappBackgroundColor
     );
   }

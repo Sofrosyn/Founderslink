@@ -18,12 +18,18 @@ class _CreateChannelScreenState extends State<CreateChannelScreen> {
           backgroundColor: AppColors.KwhiteColor,
           leading: Row(
             children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 10,right: 10),
-                child: Icon(
-                  Icons.arrow_back_ios,
-                  color: AppColors.KblackColor,
-                  size: 18,
+              InkWell(
+                onTap: (){
+                  Navigator.pop(context);
+                },
+
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 10,right: 10),
+                  child: Icon(
+                    Icons.arrow_back_ios,
+                    color: AppColors.KblackColor,
+                    size: 18,
+                  ),
                 ),
               ),
               Icon(

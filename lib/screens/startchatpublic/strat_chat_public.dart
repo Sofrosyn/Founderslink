@@ -14,10 +14,17 @@ class _StartChatPublicScreenState extends State<StartChatPublicScreen> {
     return Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: AppBar(
-          leading: Icon(
-            Icons.arrow_back_ios,
-            color: Colors.black,
-            size: 18,
+          elevation: 0.0,
+          backgroundColor: AppColors.KwhiteColor,
+          leading: InkWell(
+            onTap: (){
+              Navigator.pop(context);
+            },
+            child: Icon(
+              Icons.arrow_back_ios,
+              color: Colors.black,
+              size: 18,
+            ),
           ),
           title: Text(
             'Start Public Lobby',
@@ -32,17 +39,20 @@ class _StartChatPublicScreenState extends State<StartChatPublicScreen> {
             Icon(
               Icons.calendar_today,
               color: Colors.black,
-              size: 18,
+              size: 22,
             ),
             Icon(
               Icons.more_vert,
-              color: Colors.pink[300],
-              size: 18,
+              color: Colors.grey,
+              size: 22,
             ),
-            Icon(
-              Icons.notifications,
-              color: Colors.black,
-              size: 18,
+            Padding(
+              padding: const EdgeInsets.only(right: 10),
+              child: Icon(
+                Icons.notifications,
+                color: Colors.black,
+                size: 22,
+              ),
             ),
           ],
         ),
