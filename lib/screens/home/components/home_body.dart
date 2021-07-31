@@ -12,8 +12,8 @@ class HomeBody extends StatelessWidget {
     final width = MediaQuery.of(context).size.width;
     return SafeArea(
       child: Container(
-        height: height * 1,
-        width: width * 1,
+        height: double.infinity,
+        width: double.infinity,
         padding: EdgeInsets.only(
           left: 10.0,
           right: 10.0,
