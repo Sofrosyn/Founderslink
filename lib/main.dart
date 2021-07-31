@@ -1,6 +1,4 @@
 import 'package:floor/constants/routes.dart';
-
-import 'package:floor/sample/screen3.dart';
 import 'package:floor/screens/frameone/frame_one.dart';
 import 'package:floor/screens/home/home.dart';
 import 'package:floor/screens/startchatpublic/strat_chat_public.dart';
