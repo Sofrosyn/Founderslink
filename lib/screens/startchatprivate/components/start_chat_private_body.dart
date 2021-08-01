@@ -1,6 +1,7 @@
 import 'package:floor/constants/constants.dart';
 import 'package:floor/screens/chatmenu/chat_menu.dart';
 import 'package:floor/screens/startchatprivate/components/meeting_duration_cards.dart';
+import 'package:floor/screens/usersofficehours/users_office_hours.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -188,7 +189,7 @@ class StartChatPrivateBody extends StatelessWidget {
                 Center(
                   child: TextButton(
                     onPressed: (){
-                      Navigator.pushNamed(context, ChatMenuScreen.routeName);
+                      Navigator.pushNamed(context, UsersOfficeHoursScreen.routeName);
                     },
                     child: Text(
                       'Launch',
@@ -200,7 +201,7 @@ class StartChatPrivateBody extends StatelessWidget {
                       backgroundColor: MaterialStateProperty.all(
                         Colors.black,
                       ),
-                      fixedSize: MaterialStateProperty.all(Size(200, 40)),
+                      minimumSize: MaterialStateProperty.all(Size(200, 40)),
                     ),
                   ),
                 ),
