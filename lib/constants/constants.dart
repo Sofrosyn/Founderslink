@@ -19,6 +19,7 @@ class AppColors {
   static Color KgrayColor = Colors.grey;
   static Color KlightgrayColor = Color(0xffDEDEDE);
   static Color KblueColor = Colors.blue;
+  static Color KredColor = Colors.red;
   static Color KwhiteColor = Colors.white;
   static Color KgreenColor = Colors.green;
   static Color KtransparentColor = Colors.transparent;

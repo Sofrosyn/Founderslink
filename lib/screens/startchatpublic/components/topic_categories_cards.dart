@@ -10,7 +10,7 @@ class TopicCategoriesCards extends StatelessWidget {
     final width = MediaQuery.of(context).size.width;
     return Container(
       width: width * 0.47,
-      // height: height * 0.5,
+      height: height * 0.5,
       child: Card(
         color: AppColors.KlightgrayColor,
         child: Padding(

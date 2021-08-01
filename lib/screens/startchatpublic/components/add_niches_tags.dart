@@ -10,7 +10,7 @@ class AddNichesTags extends StatelessWidget {
     final width = MediaQuery.of(context).size.width;
     return Container(
       height: height * 0.045,
-      width: width * 0.27,
+      width: width * 0.3,
       margin: EdgeInsets.all(10),
       padding: EdgeInsets.all(10),
       alignment: Alignment.center,
