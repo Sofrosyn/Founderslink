@@ -1,4 +1,5 @@
 import 'package:floor/constants/constants.dart';
+import 'package:floor/screens/chatmenu/chat_menu.dart';
 import 'package:floor/screens/startchatprivate/components/meeting_duration_cards.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -129,6 +130,7 @@ class StartChatPrivateBody extends StatelessWidget {
                   width: width * 0.8,
                   child: GridView.count(
                     crossAxisCount: 4,
+                    physics: NeverScrollableScrollPhysics(),
                     children: List.generate(
                       8,
                           (index) => Container(
@@ -185,7 +187,9 @@ class StartChatPrivateBody extends StatelessWidget {
                 ),
                 Center(
                   child: TextButton(
-                    onPressed: null,
+                    onPressed: (){
+                      Navigator.pushNamed(context, ChatMenuScreen.routeName);
+                    },
                     child: Text(
                       'Launch',
                       style: TextStyle(
