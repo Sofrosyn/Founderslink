@@ -20,59 +20,55 @@ class CreateChannelBody extends StatelessWidget {
             padding: const EdgeInsets.all(25.0),
             child: Column(
               children: [
-                Column(
-                  children: [
-                    Text(
-                      'Create Channel',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w600,
-                        color: Colors.black,
-                      ),
-                    ),
-                    SizedBox(
-                      height: height * 0.015,
-                    ),
-                    InkWell(
-                      onTap: (){
-                        Navigator.pushNamed(context, StartChatPublicScreen.routeName);
-                      },
-                      child: Container(
-                        width: width * 0.3,
-                        height: height * 0.1,
-                        decoration: BoxDecoration(
-                            color: AppColors.KgrayColor,
-                            // Set border width
-                            borderRadius: BorderRadius.all(
-                                Radius.circular(10.0)), // Set rounded corner radius
-                          // Make rounded corner of border
+                Text(
+                  'Create Channel',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w600,
+                    color: Colors.black,
+                  ),
+                ),
+                SizedBox(
+                  height: height * 0.015,
+                ),
+                InkWell(
+                  onTap: (){
+                    Navigator.pushNamed(context, StartChatPublicScreen.routeName);
+                  },
+                  child: Container(
+                    width: width * 0.3,
+                    height: height * 0.1,
+                    decoration: BoxDecoration(
+                        color: AppColors.KgrayColor,
+                        // Set border width
+                        borderRadius: BorderRadius.all(
+                            Radius.circular(10.0)), // Set rounded corner radius
+                      // Make rounded corner of border
 
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        SizedBox(
+                          height: height * 0.007,
                         ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            SizedBox(
-                              height: height * 0.007,
-                            ),
-                            Icon(
-                              Icons.upload_rounded,
-                              size: 76,
-                            ),
-                          ],
+                        Icon(
+                          Icons.upload_rounded,
+                          size: 60,
                         ),
-                      ),
+                      ],
                     ),
-                    SizedBox(
-                      height: height * 0.01,
-                    ),
-                    Text(
-                      'Upload Image',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 10,
-                        color: Colors.black,
-                      ),
-                    ),
-                  ],
+                  ),
+                ),
+                SizedBox(
+                  height: height * 0.01,
+                ),
+                Text(
+                  'Upload Image',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                    fontSize: 10,
+                    color: Colors.black,
+                  ),
                 ),
                 SizedBox(
                   height: height * 0.03,

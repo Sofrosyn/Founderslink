@@ -1,8 +1,8 @@
 
 import 'package:floor/constants/constants.dart';
-import 'package:floor/screens/chatmenu/chat_menu.dart';
 import 'package:floor/screens/frameone/components/channel_tabbar.dart';
 import 'package:floor/screens/frameone/components/public_tabbar.dart';
+import 'package:floor/screens/startchatprivate/start_chat_private.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -149,7 +149,7 @@ class _FrameOneBodyState extends State<FrameOneBody> with SingleTickerProviderSt
                       color: Colors.white,
                     ),
                     onPressed: (){
-                      Navigator.pushNamed(context, ChatMenuScreen.routeName);
+                      Navigator.pushNamed(context, StartChatPrivateScreen.routeName);
 
                     },
                   ),

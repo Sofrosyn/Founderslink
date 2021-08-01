@@ -130,7 +130,8 @@ class StartChatPublicBody extends StatelessWidget {
                   height: height * 0.012,
                 ),
                 Container(
-                  height: height * 0.08,
+                  height: height * 0.1,
+                  // width: width * 0.47,
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     children: [
