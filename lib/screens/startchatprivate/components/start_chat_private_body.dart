@@ -1,4 +1,5 @@
 import 'package:floor/constants/constants.dart';
+import 'dart:async';
 import 'package:floor/screens/chatmenu/chat_menu.dart';
 import 'package:floor/screens/startchatprivate/components/meeting_duration_cards.dart';
 import 'package:floor/screens/usersofficehours/users_office_hours.dart';
@@ -6,6 +7,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class StartChatPrivateBody extends StatelessWidget {
+
+  bool click = false;
+
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
@@ -126,6 +130,9 @@ class StartChatPrivateBody extends StatelessWidget {
                 SizedBox(
                   height: height * 0.015,
                 ),
+
+
+
                 Container(
                   height: height * 0.2,
                   width: width * 0.8,
@@ -137,11 +144,26 @@ class StartChatPrivateBody extends StatelessWidget {
                           (index) => Container(
                         margin: EdgeInsets.only(left: 10),
 
-                        child: CircleAvatar(
-                          backgroundImage: NetworkImage(
-                              'https://www.entertales.com/wp-content/uploads/forever-single-girl-1280x720.jpg',
+                        child: Container(
+                          decoration: BoxDecoration(
+                          // color: Colors.blue,
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              // image :ExactAssetImage('assets/images/market_logo.jpeg'),
+                              image : NetworkImage(
+                                'https://www.entertales.com/wp-content/uploads/forever-single-girl-1280x720.jpg',
 
-                          ),),
+                              ),
+                            ),
+
+                          ),
+                          child: Container(
+                            decoration: new BoxDecoration(
+                                borderRadius: BorderRadius.circular(60),
+                                color: Colors.blue.withOpacity(0.5)),
+
+                          ),
+                        ),
                       ),
                     ),
                   ),
