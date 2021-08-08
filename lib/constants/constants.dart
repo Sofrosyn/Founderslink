@@ -27,4 +27,8 @@ class AppColors {
   //CreateChannelScreen colors.
   static Color KcreateChanalSCColor = Color(0xff9F9EE6);
 
+  // Chat-Menu Screen Color
+  static Color KchatMeunbackgroundSCColor = Color(0xffCDC7C7);
+
+
 }

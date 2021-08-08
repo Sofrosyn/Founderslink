@@ -6,8 +6,13 @@ import 'package:floor/screens/usersofficehours/users_office_hours.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class StartChatPrivateBody extends StatelessWidget {
+class StartChatPrivateBody extends StatefulWidget {
 
+  @override
+  _StartChatPrivateBodyState createState() => _StartChatPrivateBodyState();
+}
+
+class _StartChatPrivateBodyState extends State<StartChatPrivateBody> {
   bool click = false;
 
   @override
@@ -86,7 +91,8 @@ class StartChatPrivateBody extends StatelessWidget {
                       3,
                           (index) => ClipRRect(
                         borderRadius: BorderRadius.circular(5),
-                        child: Container(
+                        child:
+                        Container(
                           child: Card(
                             color: AppColors.KlightgrayColor,
                             child: Padding(
@@ -111,7 +117,7 @@ class StartChatPrivateBody extends StatelessWidget {
                               ),
                             ),
                           ),
-                        ),
+                        )
                       ),
                     ),
                   ),
@@ -138,34 +144,36 @@ class StartChatPrivateBody extends StatelessWidget {
                   width: width * 0.8,
                   child: GridView.count(
                     crossAxisCount: 4,
+                    mainAxisSpacing: 3,
+                    // childAspectRatio: 1,
                     physics: NeverScrollableScrollPhysics(),
                     children: List.generate(
                       8,
-                          (index) => Container(
-                        margin: EdgeInsets.only(left: 10),
+                          (index) => Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: GestureDetector(
+                              onTap: (){
+                                setState(() {
+                                  click = true;
+                                  print('and $click}');
+                                });
+                              },
+                              child: CircleAvatar(
+                                backgroundImage: NetworkImage(
+                                    'https://www.entertales.com/wp-content/uploads/forever-single-girl-1280x720.jpg'),
+                                child: click == false ? Container(
 
-                        child: Container(
-                          decoration: BoxDecoration(
-                          // color: Colors.blue,
-                            image: DecorationImage(
-                              fit: BoxFit.cover,
-                              // image :ExactAssetImage('assets/images/market_logo.jpeg'),
-                              image : NetworkImage(
-                                'https://www.entertales.com/wp-content/uploads/forever-single-girl-1280x720.jpg',
-
+                                   decoration:  BoxDecoration(
+                                  borderRadius: BorderRadius.circular(60),
+                              color: Colors.blue.withOpacity(0.5))
+                                )  : Container(),
                               ),
                             ),
+                          ),
+
 
                           ),
-                          child: Container(
-                            decoration: new BoxDecoration(
-                                borderRadius: BorderRadius.circular(60),
-                                color: Colors.blue.withOpacity(0.5)),
 
-                          ),
-                        ),
-                      ),
-                    ),
                   ),
                 ),
                 SizedBox(
