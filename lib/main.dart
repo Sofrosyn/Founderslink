@@ -23,8 +23,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: routes,
-      home: Recruting(),
-      // initialRoute: HomeScreen.routeName,
+      // home: Recruting(),
+      initialRoute: HomeScreen.routeName,
 
     );
   }
