@@ -1,4 +1,5 @@
 import 'package:floor/constants/constants.dart';
+import 'package:floor/screens/userfilter/user_filter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -108,7 +109,7 @@ class _ChatMenuScreenState extends State<ChatMenuScreen> {
             child: FloatingActionButton(
 
               onPressed: () {
-                // Add your onPressed code here!
+               Navigator.pushNamed(context, UserFilterScreen.routeName);
               },
               child: const Icon(Icons.add),
               backgroundColor: AppColors.KblueColor,
