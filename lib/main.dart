@@ -2,6 +2,8 @@ import 'package:floor/constants/routes.dart';
 import 'package:floor/screens/emptyscreen.dart';
 import 'package:floor/screens/frameone/frame_one.dart';
 import 'package:floor/screens/home/home.dart';
+import 'package:floor/screens/people/people_screen.dart';
+import 'package:floor/screens/startchatprivate/start_chat_private.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
@@ -24,7 +26,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: routes,
       // home: Recruting(),
-      initialRoute: HomeScreen.routeName,
+      initialRoute: StartChatPrivateScreen.routeName,
 
     );
   }

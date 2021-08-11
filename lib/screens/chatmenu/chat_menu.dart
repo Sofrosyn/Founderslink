@@ -1,4 +1,5 @@
 import 'package:floor/constants/constants.dart';
+import 'package:floor/screens/people/people_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -13,24 +14,7 @@ class _ChatMenuScreenState extends State<ChatMenuScreen> {
 
   int _selectedPageIndex = 0;
 
-  @override
-  void initState() {
-    _pages = [
-      {
-        'title': '',
-        // 'page' : ,
-      },
-      {
-        'title': '',
-        // 'page' : ,
-      },
-      {
-        'title': '',
-        // 'page' : ,
-      },
-    ];
-    super.initState();
-  }
+
 
   void _selectPage(int index) {
     setState(() {
@@ -66,10 +50,15 @@ class _ChatMenuScreenState extends State<ChatMenuScreen> {
             padding: const EdgeInsets.only(left: 10.0),
             child: Row(
               children: [
-                Icon(
-                  Icons.arrow_back_ios,
-                  color: Colors.black,
-                  size: 23,
+                InkWell(
+                  onTap: (){
+                    Navigator.pop(context);
+                  },
+                  child: Icon(
+                    Icons.arrow_back_ios,
+                    color: Colors.black,
+                    size: 23,
+                  ),
                 ),
                 Icon(
                   Icons.message,
@@ -108,7 +97,7 @@ class _ChatMenuScreenState extends State<ChatMenuScreen> {
             child: FloatingActionButton(
 
               onPressed: () {
-                // Add your onPressed code here!
+                Navigator.pushNamed(context, PeopleScreen.routeName);
               },
               child: const Icon(Icons.add),
               backgroundColor: AppColors.KblueColor,
