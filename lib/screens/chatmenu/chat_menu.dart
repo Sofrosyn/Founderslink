@@ -1,4 +1,5 @@
 import 'package:floor/constants/constants.dart';
+import 'package:floor/screens/people/people_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -109,6 +110,7 @@ class _ChatMenuScreenState extends State<ChatMenuScreen> {
 
               onPressed: () {
                 // Add your onPressed code here!
+                Navigator.pushNamed(context, PeopleScreen.routeName);
               },
               child: const Icon(Icons.add),
               backgroundColor: AppColors.KblueColor,
