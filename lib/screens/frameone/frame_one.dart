@@ -108,17 +108,6 @@ class _FrameOneScreenState extends State<FrameOneScreen> {
           ),
         ),
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   backgroundColor: Colors.white,
-      //   child: Icon(
-      //     Icons.person,
-      //     color: Colors.black,
-      //   ),
-      //   onPressed: (){
-      //   },
-      // ),
-      // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      // backgroundColor: AppColors.KappBackgroundColor
     );
   }
 }

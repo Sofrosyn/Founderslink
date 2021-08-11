@@ -287,7 +287,10 @@ class CreateChannelBody extends StatelessWidget {
                     ),
                   ],
                 ),
-                Spacer(),
+                // Spacer(),
+                SizedBox(
+                  height: height * 0.1,
+                ),
                 Center(
                   child: TextButton(
                     onPressed: null,
