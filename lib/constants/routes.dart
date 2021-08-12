@@ -1,6 +1,7 @@
 
 // We use name route
 // All our routes will be available here
+import 'package:floor/screens/chatinfo/chat_info.dart';
 import 'package:floor/screens/chatlobby/chat_lobby.dart';
 import 'package:floor/screens/chatmenu/chat_menu.dart';
 import 'package:floor/screens/createchannel/create_channel.dart';
@@ -9,6 +10,7 @@ import 'package:floor/screens/home/home.dart';
 import 'package:floor/screens/people/people_screen.dart';
 import 'package:floor/screens/startchatprivate/start_chat_private.dart';
 import 'package:floor/screens/startchatpublic/strat_chat_public.dart';
+import 'package:floor/screens/startprivatelobby/start_private_lobby.dart';
 import 'package:floor/screens/usersofficehours/users_office_hours.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -23,5 +25,7 @@ final Map<String, WidgetBuilder> routes = {
   UsersOfficeHoursScreen.routeName: (context) => UsersOfficeHoursScreen(),
   ChatMenuScreen.routeName: (context) => ChatMenuScreen(),
   PeopleScreen.routeName: (context) => PeopleScreen(),
+  StartPrivateLobbyScreen.routeName: (context) => StartPrivateLobbyScreen(),
+  ChatInfoScreen.routeName: (context) => ChatInfoScreen(),
 
 };

@@ -1,4 +1,5 @@
 import 'package:floor/constants/routes.dart';
+import 'package:floor/screens/chatinfo/chat_info.dart';
 import 'package:floor/screens/emptyscreen.dart';
 import 'package:floor/screens/frameone/frame_one.dart';
 import 'package:floor/screens/home/home.dart';
@@ -25,8 +26,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: routes,
-      // home: Recruting(),
-      initialRoute: StartChatPrivateScreen.routeName,
+      home: ChatInfoScreen(),
+      // initialRoute: HomeScreen.routeName,
 
     );
   }

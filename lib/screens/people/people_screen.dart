@@ -1,4 +1,5 @@
 import 'package:floor/constants/constants.dart';
+import 'package:floor/screens/startprivatelobby/start_private_lobby.dart';
 import 'package:floor/widgets/regular_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
@@ -8,7 +9,6 @@ import 'components/people_cards.dart';
 
 class PeopleScreen extends StatefulWidget {
   static String routeName = "/people";
-
 
   @override
   _PeopleScreenState createState() => _PeopleScreenState();
@@ -154,7 +154,11 @@ class _PeopleScreenState extends State<PeopleScreen> {
                     height: height * 0.02,
                   ),
 
-                  PeopleCards(),
+                  InkWell(
+                      onTap: (){
+                        Navigator.pushNamed(context, StartPrivateLobbyScreen.routeName);
+                      },
+                      child: PeopleCards()),
                   PeopleCards(),
                   PeopleCards(),
                   PeopleCards(),
