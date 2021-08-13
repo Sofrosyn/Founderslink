@@ -556,133 +556,157 @@ class _ProfileStudentState extends State<ProfileStudent> {
     );
   }
 
-  Widget _officeDetails() {
-    return Row(
-      children: [
-        Expanded(
-          child: FocusedMenuHolder(
-            //blurSize: 5.0,
-            menuItemExtent: 45,
-            menuBoxDecoration: BoxDecoration(
-                color: Colors.grey,
-                borderRadius: BorderRadius.all(Radius.circular(15.0))),
-            duration: Duration(milliseconds: 100),
-            animateMenuItems: true,
-            //blurBackgroundColor: Colors.black54,
-            openWithTap: true,
-            // Open Focused-Menu on Tap rather than Long Press
-            menuOffset: 0.0,
-            // Offset value to show menuItem from the selected item
-            bottomOffsetHeight: 0.0,
-            // Offset height to consider, for showing the menu item ( for example bottom navigation bar), so that the popup menu will be shown on top of selected item.
-            menuItems: <FocusedMenuItem>[
-              // Add Each FocusedMenuItem  for Menu Options
-              FocusedMenuItem(
-                  title: Text("Edit"),
-                  trailingIcon: Icon(Icons.edit),
-                  onPressed: () {
-                    Get.to(UserProfile());
-                  }),
-            ],
-            onPressed: () {},
-            child: Card(
-              elevation: 5,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20)),
-              child: Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Stack(
-                  children: [
-                    Align(
-                      alignment: Alignment.topLeft,
-                      child: CircleAvatar(
-                        radius: 12.r,
-                        backgroundImage: NetworkImage(defaultAvatar),
-                      ),
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        SizedBox(
-                          height: 10.h,
-                        ),
-                        Text(
-                          "Sarah Liger",
-                          style: GoogleFonts.poppins(
-                              fontSize: 12.sp, fontWeight: FontWeight.w600),
-                        ),
-                        Text(
-                          "CEO/Founder @ Silicon Velly",
-                          style: GoogleFonts.poppins(
-                              fontSize: 8.sp, color: Colors.grey),
-                        ),
-                        SizedBox(
-                          height: 10.h,
-                        ),
-                        Text(
-                          "Mon May 5 - 4:00 pm - 30 min - 10 slots left ",
-                          textAlign: TextAlign.center,
-                          style: GoogleFonts.poppins(
-                              fontSize: 8.h, color: Colors.grey),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
-        ),
-        Expanded(
-          child: Card(
-            elevation: 5,
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-            child: Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Stack(
-                children: [
-                  Align(
-                    alignment: Alignment.topLeft,
-                    child: CircleAvatar(
-                      radius: 12.r,
-                      backgroundImage: NetworkImage(defaultAvatar),
-                    ),
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      SizedBox(
-                        height: 10.h,
-                      ),
-                      Text(
-                        "Sarah Liger",
-                        style: GoogleFonts.poppins(
-                            fontSize: 12.sp, fontWeight: FontWeight.w600),
-                      ),
-                      Text(
-                        "CEO/Founder @ Silicon Velly",
-                        style: GoogleFonts.poppins(
-                            fontSize: 8.sp, color: Colors.grey),
-                      ),
-                      SizedBox(
-                        height: 10.h,
-                      ),
-                      Text(
-                        "Mon May 5 - 4:00 pm - 30 min - 10 slots left ",
-                        textAlign: TextAlign.center,
-                        style: GoogleFonts.poppins(
-                            fontSize: 8.h, color: Colors.grey),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ),
-      ],
+
+  Widget _emptyOfficeHours(){
+    return Container(
+      margin:EdgeInsets.all(10),
+        height:70.h,
+      width:150.w,
+      decoration:BoxDecoration(
+        borderRadius: BorderRadius.all(Radius.circular(10)),
+        color:Colors.white
+      ),
+      child:SizedBox(
+        height: 40.h,
+        width: 40.w,
+       child: Container(
+           decoration:BoxDecoration(
+               borderRadius: BorderRadius.all(Radius.circular(10)),
+               color:Colors.white,
+           ),
+           child: IconButton(icon:Icon(Icons.add_box_outlined, size:40.r), onPressed: (){},)
+    ),
+      )
     );
+  }
+  Widget _officeDetails() {
+    return _emptyOfficeHours();
+    //   Row(
+    //   children: [
+    //     Expanded(
+    //       child: FocusedMenuHolder(
+    //         //blurSize: 5.0,
+    //         menuItemExtent: 45,
+    //         menuBoxDecoration: BoxDecoration(
+    //             color: Colors.grey,
+    //             borderRadius: BorderRadius.all(Radius.circular(15.0))),
+    //         duration: Duration(milliseconds: 100),
+    //         animateMenuItems: true,
+    //         //blurBackgroundColor: Colors.black54,
+    //         openWithTap: true,
+    //         // Open Focused-Menu on Tap rather than Long Press
+    //         menuOffset: 0.0,
+    //         // Offset value to show menuItem from the selected item
+    //         bottomOffsetHeight: 0.0,
+    //         // Offset height to consider, for showing the menu item ( for example bottom navigation bar), so that the popup menu will be shown on top of selected item.
+    //         menuItems: <FocusedMenuItem>[
+    //           // Add Each FocusedMenuItem  for Menu Options
+    //           FocusedMenuItem(
+    //               title: Text("Edit"),
+    //               trailingIcon: Icon(Icons.edit),
+    //               onPressed: () {
+    //                 Get.to(UserProfile());
+    //               }),
+    //         ],
+    //         onPressed: () {},
+    //         child: Card(
+    //           elevation: 5,
+    //           shape: RoundedRectangleBorder(
+    //               borderRadius: BorderRadius.circular(20)),
+    //           child: Padding(
+    //             padding: const EdgeInsets.all(10.0),
+    //             child: Stack(
+    //               children: [
+    //                 Align(
+    //                   alignment: Alignment.topLeft,
+    //                   child: CircleAvatar(
+    //                     radius: 12.r,
+    //                     backgroundImage: NetworkImage(defaultAvatar),
+    //                   ),
+    //                 ),
+    //                 Column(
+    //                   crossAxisAlignment: CrossAxisAlignment.center,
+    //                   children: [
+    //                     SizedBox(
+    //                       height: 10.h,
+    //                     ),
+    //                     Text(
+    //                       "Sarah Liger",
+    //                       style: GoogleFonts.poppins(
+    //                           fontSize: 12.sp, fontWeight: FontWeight.w600),
+    //                     ),
+    //                     Text(
+    //                       "CEO/Founder @ Silicon Velly",
+    //                       style: GoogleFonts.poppins(
+    //                           fontSize: 8.sp, color: Colors.grey),
+    //                     ),
+    //                     SizedBox(
+    //                       height: 10.h,
+    //                     ),
+    //                     Text(
+    //                       "Mon May 5 - 4:00 pm - 30 min - 10 slots left ",
+    //                       textAlign: TextAlign.center,
+    //                       style: GoogleFonts.poppins(
+    //                           fontSize: 8.h, color: Colors.grey),
+    //                     ),
+    //                   ],
+    //                 ),
+    //               ],
+    //             ),
+    //           ),
+    //         ),
+    //       ),
+    //     ),
+    //     Expanded(
+    //       child: Card(
+    //         elevation: 5,
+    //         shape:
+    //             RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+    //         child: Padding(
+    //           padding: const EdgeInsets.all(10.0),
+    //           child: Stack(
+    //             children: [
+    //               Align(
+    //                 alignment: Alignment.topLeft,
+    //                 child: CircleAvatar(
+    //                   radius: 12.r,
+    //                   backgroundImage: NetworkImage(defaultAvatar),
+    //                 ),
+    //               ),
+    //               Column(
+    //                 crossAxisAlignment: CrossAxisAlignment.center,
+    //                 children: [
+    //                   SizedBox(
+    //                     height: 10.h,
+    //                   ),
+    //                   Text(
+    //                     "Sarah Liger",
+    //                     style: GoogleFonts.poppins(
+    //                         fontSize: 12.sp, fontWeight: FontWeight.w600),
+    //                   ),
+    //                   Text(
+    //                     "CEO/Founder @ Silicon Velly",
+    //                     style: GoogleFonts.poppins(
+    //                         fontSize: 8.sp, color: Colors.grey),
+    //                   ),
+    //                   SizedBox(
+    //                     height: 10.h,
+    //                   ),
+    //                   Text(
+    //                     "Mon May 5 - 4:00 pm - 30 min - 10 slots left ",
+    //                     textAlign: TextAlign.center,
+    //                     style: GoogleFonts.poppins(
+    //                         fontSize: 8.h, color: Colors.grey),
+    //                   ),
+    //                 ],
+    //               ),
+    //             ],
+    //           ),
+    //         ),
+    //       ),
+    //     ),
+    //   ],
+    // );
   }
 
   Widget _pastevents() {
@@ -714,136 +738,139 @@ class _ProfileStudentState extends State<ProfileStudent> {
   }
 
   Widget _meetUp() {
-    return Card(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-        child: Padding(
-          padding: const EdgeInsets.all(10.0),
-          child:
-              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  child: Column(
-                    children: [
-                      Text(
-                        "Jun",
-                        style: GoogleFonts.poppins(
-                            color: AppColor.blue, fontSize: 12.sp),
-                      ),
-                      Text(
-                        "22",
-                        style: GoogleFonts.poppins(
-                            color: AppColor.blue,
-                            fontSize: 16.sp,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      Text(
-                        "7:00 PM",
-                        style: GoogleFonts.poppins(fontSize: 10.sp),
-                      ),
-                    ],
-                  ),
-                ),
-                Expanded(
-                  child: Container(
-                    margin: EdgeInsets.only(left: 10.h),
-                    child: Column(
-                      children: [
-                        Text(
-                          "Colorado Founders and Investors Meet and you",
-                          overflow: TextOverflow.ellipsis,
-                          style: GoogleFonts.poppins(
-                            color: Colors.redAccent,
-                            fontSize: 12.sp,
-                          ),
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Wrap(
-                              spacing: 5.h,
-                              direction: Axis.horizontal,
-                              children: [
-                                buildChip(
-                                  "Saas",
-                                ),
-                                buildChip(
-                                  "B2B",
-                                ),
-                                buildChip(
-                                  "Socail Networking",
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                GestureDetector(
-                    child: Icon(Icons.more_horiz_rounded), onTap: () {})
-              ],
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Wrap(
-                    spacing: 5.w,
-                    children: [
-                      CircleAvatar(
-                        radius: 12.r,
-                        backgroundImage: NetworkImage(defaultAvatar),
-                      ),
-                      CircleAvatar(
-                        radius: 12.r,
-                        backgroundImage: NetworkImage(defaultAvatar),
-                      ),
-                      CircleAvatar(
-                        radius: 12.r,
-                        backgroundImage: NetworkImage(defaultAvatar),
-                      ),
-                      CircleAvatar(
-                        radius: 12.r,
-                        backgroundImage: NetworkImage(defaultAvatar),
-                      ),
-                    ],
-                  ),
-                  Container(
-                    width: 50.w,
-                    height: 20.h,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(5)),
-                        color: Colors.green),
-                    child: GestureDetector(
-                      onTap: null,
-                      child: Center(
-                          child: Text(
-                        "Add",
-                        style: GoogleFonts.poppins(
-                            fontSize: 14.sp, color: Colors.white),
-                      )),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Text(
-              "Lorem ispum dolor sit amet, conseteture adipiscing elit. conseteture  conseteture adipiscing elit.",
-              style: GoogleFonts.poppins(fontSize: 10.sp, color: Colors.grey),
-            ),
-            Wrap(
-              spacing: 5.h,
-              direction: Axis.horizontal,
-              children: [
-                buildChip("🌈📈 LGBTQA+Founders"),
-                buildChip("👩🏻‍🤝‍Co-Founder"),
-              ],
-            ),
-          ]),
-        ));
+    return Container(
+      padding:EdgeInsets.only(top:20.h),
+        child: Center(child: Text("You Have no Current Events")));
+      // Card(
+      //   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+      //   child: Padding(
+      //     padding: const EdgeInsets.all(10.0),
+      //     child:
+      //         Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      //       Row(
+      //         crossAxisAlignment: CrossAxisAlignment.start,
+      //         children: [
+      //           Container(
+      //             child: Column(
+      //               children: [
+      //                 Text(
+      //                   "Jun",
+      //                   style: GoogleFonts.poppins(
+      //                       color: AppColor.blue, fontSize: 12.sp),
+      //                 ),
+      //                 Text(
+      //                   "22",
+      //                   style: GoogleFonts.poppins(
+      //                       color: AppColor.blue,
+      //                       fontSize: 16.sp,
+      //                       fontWeight: FontWeight.bold),
+      //                 ),
+      //                 Text(
+      //                   "7:00 PM",
+      //                   style: GoogleFonts.poppins(fontSize: 10.sp),
+      //                 ),
+      //               ],
+      //             ),
+      //           ),
+      //           Expanded(
+      //             child: Container(
+      //               margin: EdgeInsets.only(left: 10.h),
+      //               child: Column(
+      //                 children: [
+      //                   Text(
+      //                     "Colorado Founders and Investors Meet and you",
+      //                     overflow: TextOverflow.ellipsis,
+      //                     style: GoogleFonts.poppins(
+      //                       color: Colors.redAccent,
+      //                       fontSize: 12.sp,
+      //                     ),
+      //                   ),
+      //                   Row(
+      //                     mainAxisAlignment: MainAxisAlignment.start,
+      //                     children: [
+      //                       Wrap(
+      //                         spacing: 5.h,
+      //                         direction: Axis.horizontal,
+      //                         children: [
+      //                           buildChip(
+      //                             "Saas",
+      //                           ),
+      //                           buildChip(
+      //                             "B2B",
+      //                           ),
+      //                           buildChip(
+      //                             "Socail Networking",
+      //                           ),
+      //                         ],
+      //                       ),
+      //                     ],
+      //                   ),
+      //                 ],
+      //               ),
+      //             ),
+      //           ),
+      //           GestureDetector(
+      //               child: Icon(Icons.more_horiz_rounded), onTap: () {})
+      //         ],
+      //       ),
+      //       Padding(
+      //         padding: const EdgeInsets.symmetric(vertical: 10.0),
+      //         child: Row(
+      //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      //           children: [
+      //             Wrap(
+      //               spacing: 5.w,
+      //               children: [
+      //                 CircleAvatar(
+      //                   radius: 12.r,
+      //                   backgroundImage: NetworkImage(defaultAvatar),
+      //                 ),
+      //                 CircleAvatar(
+      //                   radius: 12.r,
+      //                   backgroundImage: NetworkImage(defaultAvatar),
+      //                 ),
+      //                 CircleAvatar(
+      //                   radius: 12.r,
+      //                   backgroundImage: NetworkImage(defaultAvatar),
+      //                 ),
+      //                 CircleAvatar(
+      //                   radius: 12.r,
+      //                   backgroundImage: NetworkImage(defaultAvatar),
+      //                 ),
+      //               ],
+      //             ),
+      //             Container(
+      //               width: 50.w,
+      //               height: 20.h,
+      //               decoration: BoxDecoration(
+      //                   borderRadius: BorderRadius.all(Radius.circular(5)),
+      //                   color: Colors.green),
+      //               child: GestureDetector(
+      //                 onTap: null,
+      //                 child: Center(
+      //                     child: Text(
+      //                   "Add",
+      //                   style: GoogleFonts.poppins(
+      //                       fontSize: 14.sp, color: Colors.white),
+      //                 )),
+      //               ),
+      //             ),
+      //           ],
+      //         ),
+      //       ),
+      //       Text(
+      //         "Lorem ispum dolor sit amet, conseteture adipiscing elit. conseteture  conseteture adipiscing elit.",
+      //         style: GoogleFonts.poppins(fontSize: 10.sp, color: Colors.grey),
+      //       ),
+      //       Wrap(
+      //         spacing: 5.h,
+      //         direction: Axis.horizontal,
+      //         children: [
+      //           buildChip("🌈📈 LGBTQA+Founders"),
+      //           buildChip("👩🏻‍🤝‍Co-Founder"),
+      //         ],
+      //       ),
+      //     ]),
+      //   ));
   }
 }

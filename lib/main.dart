@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_session/flutter_session.dart';
 import 'package:founderslink/core/data/local/constants.dart';
-import 'package:founderslink/core/di/injector.dart';
+import 'package:founderslink/core/di/injector.dart' as di;
 import 'package:founderslink/ui/authentication/models/login_model.dart';
 import 'package:founderslink/ui/authentication/provider/login_provider_validation.dart';
 import 'package:founderslink/ui/authentication/provider/registration_provider_validation.dart';
@@ -15,8 +15,14 @@ import 'package:provider/provider.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
-   configureDependencies();
+
+  //initialize dependencies
+  await di.initDependencies();
+
+
   runApp(
+
+    //declare and initialize providers to be available throughout the project
       MultiProvider(providers: [
         ChangeNotifierProvider<LoginFormProvider>(create: (_) => LoginFormProvider()),
         ChangeNotifierProvider<SignUpFormProvider>(create: (_) => SignUpFormProvider()),
@@ -30,7 +36,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      //device preview
       designSize: Size(360, 690),
       builder: () => GetMaterialApp(
         theme: ThemeData(
@@ -88,9 +93,4 @@ final requestController = Get.put(UserDataController());
   }
 
 
-  //FutureBuilder(
-//               future: checkLoggedInStatus(),
-//               builder: (context, snapshot) {
-//                 return Text("Welcome");
-//               })
 }
