@@ -4,7 +4,7 @@ import 'dart:io';
 
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
-import 'package:founderslink/core/di/authentication_module/authentication_module_injector.dart';
+import 'package:founderslink/core/di/injector.dart';
 import 'package:founderslink/core/error/faliure.dart';
 import 'package:founderslink/ui/authentication/data/repo/authentication_respository.dart';
 import 'package:founderslink/ui/authentication/models/location_response.dart';
@@ -27,10 +27,10 @@ class AuthenticationBloc
   AuthenticationState get initialState => AuthenticationInitial();
 
   Future<List<Suggestion>> fetchSuggestions(String input) async {
-    print('input');
+
     List<Suggestion> suggestions;
     final placeDetailResult =
-        await authenticationRepository.getPlaceSuggestions(input);
+        await sl.get<AuthenticationRepository>().getPlaceSuggestions(input);
     placeDetailResult.fold((l) => null, (r) => suggestions = r);
     return suggestions;
   }
@@ -38,13 +38,12 @@ class AuthenticationBloc
   Future<Place> fetchDetailsFromId(String input) async {
     Place place;
     final placeDetailResult =
-        await authenticationRepository.getPlaceDetailFromId(input);
+        await sl.get<AuthenticationRepository>().getPlaceDetailFromId(input);
     placeDetailResult.fold((l) => null, (r) => place = r);
     return place;
   }
 
-  final authenticationRepository =
-      AuthenticationModuleInjector.resolve<AuthenticationRepository>();
+
 
   @override
   Stream<AuthenticationState> mapEventToState(
@@ -54,17 +53,11 @@ class AuthenticationBloc
       yield Loading();
 
       try {
-        print('22');
-        final loginResponse = await authenticationRepository.loginUser(
+     await sl.get<AuthenticationRepository>().loginUser(
             password: event.password, email: event.email);
-        print('333');
-        // if(loginResponse.isRight()){
+
         yield LoginSuccess();
-        //}else{
-        // var msg; loginResponse.fold((l) => msg, (r) => null);
-        //  yield AuthenticationError(message:"error");
-        // }
-        print('44');
+
       } catch (e) {
         yield AuthenticationError(
             message: jsonDecode(e.toString())['message'].toString());
@@ -75,7 +68,7 @@ class AuthenticationBloc
       yield Loading();
 
       try {
-        await authenticationRepository.signUpUser(
+        await sl.get<AuthenticationRepository>().signUpUser(
             fName: event.fName,
             lName: event.lName,
             password: event.password,
@@ -91,7 +84,7 @@ class AuthenticationBloc
     if (event is GetPlaceIdEvent) {
       try {
         final _placeDetailResult =
-            await authenticationRepository.getPlaceSuggestions(event.input);
+            await sl.get<AuthenticationRepository>().getPlaceSuggestions(event.input);
         yield HasPlaceId(_placeDetailResult);
       } catch (error) {
         yield AuthenticationError(
@@ -102,7 +95,7 @@ class AuthenticationBloc
     if (event is GetPlaceDetailsEvent) {
       try {
         var _response =
-            await authenticationRepository.getPlaceDetailFromId(event.id);
+            await sl.get<AuthenticationRepository>().getPlaceDetailFromId(event.id);
         yield HasPlaceDetails(_response);
       } catch (error) {
         yield AuthenticationError(
@@ -113,7 +106,7 @@ class AuthenticationBloc
     if (event is GetNicheAndIndustryEvent) {
       yield Loading();
       try {
-        var _response = await authenticationRepository.getNicheAndIndustries();
+        var _response = await sl.get<AuthenticationRepository>().getNicheAndIndustries();
         yield HasNicheAndIndustry(response: _response);
       } catch (error) {
         yield AuthenticationError(
@@ -124,7 +117,7 @@ class AuthenticationBloc
     if (event is GetUniversitiesEvent) {
       yield FetchingUniversitiesState();
       try {
-        var _response = await authenticationRepository.getUniversities();
+        var _response = await sl.get<AuthenticationRepository>().getUniversities();
         yield HasUniversitiesState(response: _response);
       } catch (error) {
         yield AuthenticationError(
@@ -134,9 +127,9 @@ class AuthenticationBloc
 
     if (event is UpdateFounderProfile) {
       yield Loading();
-      print("1");
+
       try {
-        var _response = await authenticationRepository.updateFounderProfile(
+        await sl.get<AuthenticationRepository>().updateFounderProfile(
             industries: event.industries,
             location: event.location,
             niches: event.niches,
@@ -145,7 +138,7 @@ class AuthenticationBloc
             years_of_experience: event.years_of_experience,
             title: event.title,
             company_name: event.company_name);
-        print("2");
+
         yield UpdateFounderProfileSuccess();
       } catch (error) {
         yield AuthenticationError(
@@ -156,7 +149,7 @@ class AuthenticationBloc
     if (event is UpdateInvestorProfileEvent) {
       yield Loading();
       try {
-        var _response = await authenticationRepository.updateInvestorProfile(
+        await sl.get<AuthenticationRepository>().updateInvestorProfile(
           industries: event.industries,
           location: event.location,
           niches: event.niches,
@@ -171,7 +164,7 @@ class AuthenticationBloc
     if (event is UpdateTeamMemberProfile) {
       yield Loading();
       try {
-        var _response = await authenticationRepository.updateTeamMemberProfile(
+        await sl.get<AuthenticationRepository>().updateTeamMemberProfile(
             industries: event.industries,
             location: event.location,
             niches: event.niches,
@@ -187,8 +180,7 @@ class AuthenticationBloc
     if (event is UpdateStudentProfile) {
       try {
         yield Loading();
-        print("1");
-        var _response = await authenticationRepository.updateStudentProfile(
+        await sl.get<AuthenticationRepository>().updateStudentProfile(
           location: event.location,
           niches: event.niches,
           goal_id: event.goal_id,
@@ -197,7 +189,7 @@ class AuthenticationBloc
           entrepreneurial_experience: event.entrepreneurial_experience,
           course_of_study: event.course_of_study,
         );
-        print("1");
+
         yield UpdateStudentProfileSuccess();
       } catch (error) {
         yield AuthenticationError(
@@ -211,8 +203,8 @@ class AuthenticationBloc
     if (event is GetInterestsAndGoalsEvent) {
       yield Loading();
       try {
-        var goals = await authenticationRepository.getGoals();
-        var interests = await authenticationRepository.getInterests();
+        var goals = await sl.get<AuthenticationRepository>().getGoals();
+        var interests = await sl.get<AuthenticationRepository>().getInterests();
         yield HasInterestsAndGoals(goals:goals,interests: interests);
       } catch (error) {
         yield AuthenticationError(
@@ -223,7 +215,7 @@ class AuthenticationBloc
     if (event is GetPronounsEvent) {
       yield Loading();
       try {
-        var _response = await authenticationRepository.getPronouns();
+        var _response = await sl.get<AuthenticationRepository>().getPronouns();
         yield HasPronouns(response:_response);
       } catch (error) {
         yield AuthenticationError(
@@ -232,21 +224,13 @@ class AuthenticationBloc
     }
 
 
-    // if (event is GetInterestsEvent) {
-    //   try {
-    //     var _response = await authenticationRepository.getInterests();
-    //     yield HasInterests(response:_response);
-    //   } catch (error) {
-    //     yield AuthenticationError(
-    //         message: jsonDecode(error.toString())['message'].toString());
-    //   }
-    // }
+
 
     if (event is UpdateProfilePhotoEvent) {
       yield Loading();
       try {
-         await authenticationRepository.setPronoun(pronoun_id:event.pronoun_id);
-        var _response = await authenticationRepository.UploadProfilePhoto(event.file);
+         await sl.get<AuthenticationRepository>().setPronoun(pronoun_id:event.pronoun_id);
+        await sl.get<AuthenticationRepository>().UploadProfilePhoto(event.file);
         yield UpdateProfilePhotoSuccess();
       } catch (error) {
         yield AuthenticationError(

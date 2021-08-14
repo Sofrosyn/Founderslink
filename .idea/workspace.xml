@@ -13,11 +13,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a3f49c1-6892-4384-b6a5-997783ef79a5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/core/ui/widgets/toast.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/ui/widgets/toast.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/controller/user_data_provider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/controller/user_data_provider.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/profile/data/models/profile_response.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/profile/data/models/profile_response.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/profile/presentation/profile_edit.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/profile/presentation/profile_edit.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/di/injector.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/di/injector.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/ui/profile/presentation/profile_student.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/profile/presentation/profile_student.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +33,7 @@
     </option>
   </component>
   <component name="Git.Pull.Settings">
-    <option name="BRANCH" value="irf/profile-seq" />
+    <option name="BRANCH" value="Dev" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -109,22 +108,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="538" y="257" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1623657554226" />
-    <state width="1323" height="234" key="GridCell.Tab.0.bottom" timestamp="1627284622159">
+    <state width="1306" height="233" key="GridCell.Tab.0.bottom" timestamp="1627637093759">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="234" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1627284622159" />
-    <state width="1323" height="234" key="GridCell.Tab.0.center" timestamp="1627284622158">
+    <state width="1306" height="233" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1627637093759" />
+    <state width="1306" height="233" key="GridCell.Tab.0.center" timestamp="1627637093759">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="234" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1627284622158" />
-    <state width="1323" height="234" key="GridCell.Tab.0.left" timestamp="1627284622157">
+    <state width="1306" height="233" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1627637093759" />
+    <state width="1306" height="233" key="GridCell.Tab.0.left" timestamp="1627637093759">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="234" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1627284622157" />
-    <state width="1323" height="234" key="GridCell.Tab.0.right" timestamp="1627284622158">
+    <state width="1306" height="233" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1627637093759" />
+    <state width="1306" height="233" key="GridCell.Tab.0.right" timestamp="1627637093759">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="234" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1627284622158" />
+    <state width="1306" height="233" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1627637093759" />
     <state x="129" y="55" key="MergeDialog" timestamp="1625927845718">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -137,10 +136,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="92" y="92" width="1182" height="544" key="ShowDiffWithBranchDialog/0.0.1366.728@0.0.1366.728" timestamp="1625928493499" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1627284660350">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1627499695891">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1627284660350" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1627499695891" />
     <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1623519962489">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

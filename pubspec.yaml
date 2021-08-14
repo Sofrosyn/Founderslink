@@ -52,7 +52,7 @@ dependencies:
   path:
   flutter_svg: ^0.21.0
   provider:
-  kiwi: ^0.2.0
+#  kiwi: ^0.2.0
   dartz: ^0.8.9
   font_awesome_flutter: ^9.1.0
   open_file: ^3.2.1
@@ -74,7 +74,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   build_runner:
-  kiwi_generator: ^0.4.0
+#  kiwi_generator: ^0.4.0
   integration_test:
     sdk: flutter
 
