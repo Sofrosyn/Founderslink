@@ -154,15 +154,14 @@ class AuthenticationRemoteDatasourceImpl
   @override
   Future<Either<Failure, LoginResponse>> login(
       {String email, String password}) async {
-    print('1');
-    try {
-      var _data = {
+    print('11');
+     var _data = {
         'email': email,
         'password': password.trim(),
       };
-
+    try {
       print('2');
-      var response = await dioClient.post("${Constant.STAGING_BASE_URL}login",
+      final response = await dioClient.post("${Constant.STAGING_BASE_URL}login",
           data: _data);
 
       print('3');
@@ -172,8 +171,6 @@ class AuthenticationRemoteDatasourceImpl
       print('5');
       if (response.statusCode == 200 || response.statusCode == 201) {
         return Right(LoginResponse.fromJson(response.data));
-      } else if (response.statusCode == 400) {
-        throw "Invalid Login Details";
       } else {
         print('left');
         return Left(ServerFailure());

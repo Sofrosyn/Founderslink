@@ -6,16 +6,22 @@ import 'package:founderslink/core/network/network_service.dart';
 import 'package:founderslink/ui/profile/data/models/interest_response.dart';
 import 'package:founderslink/ui/profile/data/models/niches_response.dart';
 import 'package:founderslink/ui/profile/data/models/profile_response.dart';
+import 'package:founderslink/ui/profile/data/models/user_connections_response.dart';
 
 abstract class ProfileRemoteDataSource extends NetworkService {
   ProfileRemoteDataSource(Dio dioClient) : super(dioClient);
+Future<Either<Failure, ConnectionsSuggestionsResponse>> getConnectionSuggestionsProfile({String token});
 
+Future<Either<Failure, ConnectionsSuggestionsResponse>> createUserConnection({String token, String userId});
+Future<Either<Failure, ConnectionsSuggestionsResponse>> revokeUserConnection({String token, String userId});
+Future<Either<Failure, ConnectionsSuggestionsResponse>> getUserConnections({String token});
+Future<Either<Failure, ConnectionsSuggestionsResponse>> searchUserConnections({String token, String query});
   Future<Either<Failure, ProfileResponse>> getUserProfile({String token});
 
   Future<Either<Failure, InterestsResponse>> getInterests();
 
   Future<Either<Failure, NichesResponse>> getNiches();
-
+  
   Future<Either<Failure, void>> updateUserProfileData(
       {String bio, String title, String fName, String lName, String token});
 
@@ -191,6 +197,111 @@ class ProfileRemoteDatasourceImpl extends ProfileRemoteDataSource {
       print(response.statusCode);
       if (response.statusCode == 200 || response.statusCode == 201) {
         //  return Right(NichesResponse.fromJson(response.data));
+      } else {
+        print('left');
+        return Left(ServerFailure());
+      }
+    } catch (error) {
+      print('left catch');
+      print(error.response.toString());
+      throw error.response;
+    }
+  }
+
+  @override
+  Future<Either<Failure, ConnectionsSuggestionsResponse>> getConnectionSuggestionsProfile({String token})async {
+     try {
+      dioClient.options.headers["Authorization"] = "Bearer $token";
+      var response = await dioClient
+          .get("${Constant.STAGING_BASE_URL}account/connections");
+      print(response.data);
+      print(response.statusCode);
+      if (response.statusCode == 200 || response.statusCode == 201) {
+         return Right(ConnectionsSuggestionsResponse.fromJson(response.data));
+      } else {
+        print('left');
+        return Left(ServerFailure());
+      }
+    } catch (error) {
+      print('left catch');
+      print(error.response.toString());
+      throw error.response;
+    }
+  }
+
+  @override
+  Future<Either<Failure, ConnectionsSuggestionsResponse>> createUserConnection({String token, String userId})async {
+     try {
+      dioClient.options.headers["Authorization"] = "Bearer $token";
+      var response = await dioClient
+          .post("${Constant.STAGING_BASE_URL}account/connections", data:{"user_id":userId});
+      print(response.data);
+      print(response.statusCode);
+      if (response.statusCode == 200 || response.statusCode == 201) {
+         return Right(ConnectionsSuggestionsResponse.fromJson(response.data));
+      } else {
+        print('left');
+        return Left(ServerFailure());
+      }
+    } catch (error) {
+      print('left catch');
+      print(error.response.toString());
+      throw error.response;
+    }
+  }
+
+  @override
+  Future<Either<Failure, ConnectionsSuggestionsResponse>> getUserConnections({String token})async {
+    try {
+      dioClient.options.headers["Authorization"] = "Bearer $token";
+      var response = await dioClient
+          .get("${Constant.STAGING_BASE_URL}account/connections");
+      print(response.data);
+      print(response.statusCode);
+      if (response.statusCode == 200 || response.statusCode == 201) {
+         return Right(ConnectionsSuggestionsResponse.fromJson(response.data));
+      } else {
+        print('left');
+        return Left(ServerFailure());
+      }
+    } catch (error) {
+      print('left catch');
+      print(error.response.toString());
+      throw error.response;
+    }
+  }
+
+  @override
+  Future<Either<Failure, ConnectionsSuggestionsResponse>> revokeUserConnection({String token, String userId})async {
+     try {
+      dioClient.options.headers["Authorization"] = "Bearer $token";
+      var response = await dioClient
+          .post("${Constant.STAGING_BASE_URL}account/connections",data:{"user_id":userId});
+      print(response.data);
+      print(response.statusCode);
+      if (response.statusCode == 200 || response.statusCode == 201) {
+         return Right(ConnectionsSuggestionsResponse.fromJson(response.data));
+      } else {
+        print('left');
+        return Left(ServerFailure());
+      }
+    } catch (error) {
+      print('left catch');
+      print(error.response.toString());
+      throw error.response;
+    }
+  }
+
+  @override
+  Future<Either<Failure, ConnectionsSuggestionsResponse>> searchUserConnections({String token, String query})async {
+    try {
+      dioClient.options.headers["Authorization"] = "Bearer $token";
+      var response = await dioClient
+          .get("${Constant.STAGING_BASE_URL}account/connections", queryParameters: {"query":query});
+      print(response.data);
+      print(response.statusCode);
+      if (response.statusCode == 200 || response.statusCode == 201) {
+         return Right(ConnectionsSuggestionsResponse.fromJson(response.data));
       } else {
         print('left');
         return Left(ServerFailure());

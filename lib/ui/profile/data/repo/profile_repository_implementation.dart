@@ -8,6 +8,7 @@ import 'package:founderslink/ui/authentication/models/signup_response.dart';
 import 'package:founderslink/ui/profile/data/models/interest_response.dart';
 import 'package:founderslink/ui/profile/data/models/niches_response.dart';
 import 'package:founderslink/ui/profile/data/models/profile_response.dart';
+import 'package:founderslink/ui/profile/data/models/user_connections_response.dart';
 import 'package:founderslink/ui/profile/data/remote/profile_remote.dart';
 import 'profile_respository.dart';
 
@@ -110,5 +111,35 @@ class ProfileRepositoryImpl extends ProfileRepository {
         token: token,
         newPassword: newPassword,
         newPasswordConfirmation: newPasswordConfirmation);
+  }
+
+  @override
+  Future<Either<Failure, ConnectionsSuggestionsResponse>> createUserConnection({String userId})async {
+   var token = await getToken();
+    return profileRemote.createUserConnection(token :token, userId:userId);
+  }
+
+  @override
+  Future<Either<Failure, ConnectionsSuggestionsResponse>> getConnectionSuggestionsProfile() async{
+   var token = await getToken();
+   return profileRemote.getConnectionSuggestionsProfile(token :token);
+  }
+
+  @override
+  Future<Either<Failure, ConnectionsSuggestionsResponse>> getUserConnections()async {
+ var token = await getToken();
+ return profileRemote.getUserConnections(token :token);
+  }
+
+  @override
+  Future<Either<Failure, ConnectionsSuggestionsResponse>> revokeUserConnection({String userId}) async{
+    var token = await getToken();
+    return profileRemote.revokeUserConnection(token :token, userId:userId);
+  }
+
+  @override
+  Future<Either<Failure, ConnectionsSuggestionsResponse>> searchUserConnections({String query})async {
+    var token = await getToken();
+    return profileRemote.searchUserConnections(token :token, query:query);
   }
 }

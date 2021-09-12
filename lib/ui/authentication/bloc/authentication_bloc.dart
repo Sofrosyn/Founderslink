@@ -51,16 +51,12 @@ class AuthenticationBloc
   ) async* {
     if (event is LoginEvent) {
       yield Loading();
-
       try {
-     await sl.get<AuthenticationRepository>().loginUser(
-            password: event.password, email: event.email);
-
+     await sl.get<AuthenticationRepository>().loginUser(password: event.password, email: event.email);
         yield LoginSuccess();
-
       } catch (e) {
         yield AuthenticationError(
-            message: jsonDecode(e.toString())['message'].toString());
+            message: e.toString());
       }
     }
 
