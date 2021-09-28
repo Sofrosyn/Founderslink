@@ -26,8 +26,11 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+<<<<<<< HEAD
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Allow the app to record using your phones microphone</string>
+=======
+>>>>>>> f8f9a12249ac860e3858329dc1edd0321a85b2fe
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
